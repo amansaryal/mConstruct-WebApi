@@ -2,13 +2,15 @@
 using Session_WebApi;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MobileWebApiLibrary
 {
     class Program
     {
-        public static void Main(string[] args)
+        public static async System.Threading.Tasks.Task Main(string[] args)
         {
             LoginRequest request = new LoginRequest();
             request.AppName = Appname.Mconstruct;
@@ -17,7 +19,9 @@ namespace MobileWebApiLibrary
             request.Imei = "aman.saryal";
             request.IpAddress = "aman.saryal";
 
+             
             new Client().makeRequest(request);
+
         }
     }
 }

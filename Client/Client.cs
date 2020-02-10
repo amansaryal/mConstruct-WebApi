@@ -11,21 +11,18 @@ namespace Session_WebApi
 {
     public class Client
 {
-        private String url = "http://localhost:5000/api/session/login";
+        private String url = "http://localhost:5000/api/session";
 
-        public bool makeRequest(LoginRequest requestObject)
+        public void makeRequest(LoginRequest requestObject)
         {
             try
             {
-                MemoryStream outputStream = new MemoryStream();
-                requestObject.WriteTo(new CodedOutputStream(outputStream));
-
-                byte[] data = outputStream.ToArray();
+                byte[] data = requestObject.ToByteArray();
 
                 // Prepare web request...
                 HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
                 webRequest.Method = "POST";
-                webRequest.ContentType = "text/plain";
+                webRequest.ContentType = "application/x-protobuf";
                 webRequest.ContentLength = data.Length;
                 using (Stream postStream = webRequest.GetRequestStream())
                 {
@@ -34,14 +31,13 @@ namespace Session_WebApi
                     postStream.Close();
                 }
 
-                WebResponse response = webRequest.GetResponse();
-                Console.WriteLine(UserSession.Parser.ParseFrom(response.GetResponseStream()).ToString());
-                return true;
+                
+                Console.WriteLine(UserSession.Parser.ParseFrom(webRequest.GetResponse().GetResponseStream()).ToString());
             }
             catch (Exception ex)
             {
-                //Log exception here...
-                return false;
+                Console.WriteLine("Ex:" + ex.Message);
+                
             }
         }
 }
