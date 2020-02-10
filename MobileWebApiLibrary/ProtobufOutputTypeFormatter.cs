@@ -14,7 +14,7 @@ namespace MobileWebApiLibrary
 
         public ProtobufOutputTypeFormatter()
         {
-            SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("x-protobuf"));
+            SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("text/plain"));
         }
 
         protected override bool CanWriteType(Type type)

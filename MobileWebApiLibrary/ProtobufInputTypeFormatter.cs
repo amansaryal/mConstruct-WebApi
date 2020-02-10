@@ -13,7 +13,7 @@ namespace MobileWebApiLibrary
 
         public ProtobufInputTypeFormatter()
         {
-            SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("x-protobuf"));
+            SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("text/plain"));
         }
 
         protected override bool CanReadType(Type type)

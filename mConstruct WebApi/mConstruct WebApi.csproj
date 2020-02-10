@@ -15,9 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="MobileWebApiLibrary">
-      <HintPath>..\MobileWebApiLibrary\bin\Debug\netstandard2.0\MobileWebApiLibrary.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\MobileWebApiLibrary\MobileWebApiLibrary.csproj" />
   </ItemGroup>
 
 </Project>
