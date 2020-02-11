@@ -9,18 +9,19 @@ using System.Threading.Tasks;
 
 namespace MobileWebApiLibrary
 {
-    public class ProtobufOutputTypeFormatter : OutputFormatter
+    public class ProtoJsonOutputTypeFormatter : OutputFormatter
     {
 
-        public ProtobufOutputTypeFormatter()
+        public ProtoJsonOutputTypeFormatter()
         {
-            SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("application/x-protobuf"));
+            SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("application/proto+json"));
         }
 
         protected override bool CanWriteType(Type type)
         {
             if (type == null)
-                throw new ArgumentNullException("type");           
+                throw new ArgumentNullException("type");
+
             if (type.GetInterface("IMessage") == typeof(IMessage))
                 return true;
 
@@ -32,10 +33,7 @@ namespace MobileWebApiLibrary
             if (context.Object is IMessage)
             {
                 var response = context.HttpContext.Response;
-
-
-                byte[] data = (context.Object as IMessage).ToByteArray();
-                return response.Body.WriteAsync(data, 0, data.Length);
+                return response.WriteAsync((context.Object as IMessage).ToString());
             }
 
             return null;
@@ -46,10 +44,7 @@ namespace MobileWebApiLibrary
             if (context.Object is IMessage)
             {
                 var response = context.HttpContext.Response;
-
-
-                byte[] data = (context.Object as IMessage).ToByteArray();
-                return response.Body.WriteAsync(data, 0, data.Length);
+                return response.WriteAsync((context.Object as IMessage).ToString());
             }
 
             return null;

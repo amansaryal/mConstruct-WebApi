@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace MobileWebApiLibrary
 {
-    public class ProtobufInputTypeFormatter : InputFormatter
+    public class ProtoJsonInputTypeFormatter : InputFormatter
     {
 
-        public ProtobufInputTypeFormatter()
+        public ProtoJsonInputTypeFormatter()
         {
-            SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("application/x-protobuf"));
+            SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("application/json"));
         }
 
         protected override bool CanReadType(Type type)
@@ -47,7 +47,7 @@ namespace MobileWebApiLibrary
 
 
 
-                    return InputFormatterResult.SuccessAsync(parserObject.ParseFrom(StreamHelper.ReadFully(request.Body)));
+                    return InputFormatterResult.SuccessAsync(parserObject.ParseJson(new StreamReader(request.Body).ReadToEnd()));
 
                 }
                 catch
@@ -77,13 +77,14 @@ namespace MobileWebApiLibrary
 
 
 
-                return InputFormatterResult.SuccessAsync(parserObject.ParseFrom(StreamHelper.ReadFully(request.Body)));
+                return InputFormatterResult.SuccessAsync(parserObject.ParseJson(new StreamReader(request.Body).ReadToEnd()));
 
             }
             catch
             {
                 return InputFormatterResult.FailureAsync();
             }
-        }      
+
+        }
     }
 }

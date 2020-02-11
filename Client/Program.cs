@@ -10,7 +10,7 @@ namespace MobileWebApiLibrary
 {
     class Program
     {
-        public static async System.Threading.Tasks.Task Main(string[] args)
+        public static void Main(string[] args)
         {
             LoginRequest request = new LoginRequest();
             request.AppName = Appname.Mconstruct;
@@ -20,7 +20,7 @@ namespace MobileWebApiLibrary
             request.IpAddress = "aman.saryal";
 
              
-            new Client().makeRequest(request);
+            new Client().makeEncryptedRequest(request);
 
         }
     }
