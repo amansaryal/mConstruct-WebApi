@@ -7,7 +7,7 @@ using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace MobileWebApiLibrary
+namespace MobileWebApiLibrary.Formatters
 {
     public class ProtoJsonOutputTypeFormatter : OutputFormatter
     {

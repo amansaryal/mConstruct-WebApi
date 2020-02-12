@@ -25,24 +25,24 @@ namespace Grpc.services {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chtwcm90b3MvU2Vzc2lvblNlcnZpY2UucHJvdG8aE3Byb3Rvcy9Db21tb24u",
-            "cHJvdG8ibgoMTG9naW5SZXF1ZXN0EhAKCHVzZXJuYW1lGAEgASgJEhAKCHBh",
-            "c3N3b3JkGAIgASgJEhkKB2FwcE5hbWUYAyABKA4yCC5BcHBuYW1lEgwKBGlt",
-            "ZWkYBCABKAkSEQoJaXBBZGRyZXNzGAUgASgJIlgKC1VzZXJTZXNzaW9uEhAK",
-            "CHVzZXJuYW1lGAEgASgJEg0KBXRva2VuGAIgASgJEhQKBXJvbGVzGAMgAygO",
-            "MgUuUm9sZRISCgphcHBWZXJzaW9uGAQgASgFIjwKDUxvZ291dFJlcXVlc3QS",
-            "EAoIdXNlcm5hbWUYASABKAkSGQoHYXBwTmFtZRgCIAEoDjIILkFwcG5hbWUq",
-            "JQoHQXBwbmFtZRIKCgZOT05BTUUQABIOCgpNQ09OU1RSVUNUEAEqTQoEUm9s",
-            "ZRILCgdOT19ST0xFEAASEgoORklFTERfRU5HSU5FRVIQARIUChBRVUFMSVRZ",
-            "X0VOR0lORUVSEAISDgoKSU5GUkFfTEVBRBADMlQKB1Nlc3Npb24SJAoFTG9n",
-            "aW4SDS5Mb2dpblJlcXVlc3QaDC5Vc2VyU2Vzc2lvbhIjCgZMb2dvdXQSDi5M",
-            "b2dvdXRSZXF1ZXN0GgkuUmVzcG9uc2VCKQoXY29tLm1Db25zdHJ1Y3QucHJv",
-            "dG9idWaqAg1HcnBjLnNlcnZpY2VzYgZwcm90bzM="));
+            "cHJvdG8iggEKDExvZ2luUmVxdWVzdBIQCgh1c2VybmFtZRgBIAEoCRIQCghw",
+            "YXNzd29yZBgCIAEoCRIZCgdhcHBOYW1lGAMgASgOMgguQXBwbmFtZRIMCgRp",
+            "bWVpGAQgASgJEhEKCWlwQWRkcmVzcxgFIAEoCRISCgphcHBWZXJzaW9uGAYg",
+            "ASgFIkQKC1VzZXJTZXNzaW9uEhAKCHVzZXJuYW1lGAEgASgJEg0KBXRva2Vu",
+            "GAIgASgJEhQKBXJvbGVzGAMgAygOMgUuUm9sZSI8Cg1Mb2dvdXRSZXF1ZXN0",
+            "EhAKCHVzZXJuYW1lGAEgASgJEhkKB2FwcE5hbWUYAiABKA4yCC5BcHBuYW1l",
+            "KiUKB0FwcG5hbWUSCgoGTk9OQU1FEAASDgoKTUNPTlNUUlVDVBABKk0KBFJv",
+            "bGUSCwoHTk9fUk9MRRAAEhIKDkZJRUxEX0VOR0lORUVSEAESFAoQUVVBTElU",
+            "WV9FTkdJTkVFUhACEg4KCklORlJBX0xFQUQQAzJUCgdTZXNzaW9uEiQKBUxv",
+            "Z2luEg0uTG9naW5SZXF1ZXN0GgwuVXNlclNlc3Npb24SIwoGTG9nb3V0Eg4u",
+            "TG9nb3V0UmVxdWVzdBoJLlJlc3BvbnNlQikKF2NvbS5tQ29uc3RydWN0LnBy",
+            "b3RvYnVmqgINR3JwYy5zZXJ2aWNlc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Grpc.common.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grpc.services.Appname), typeof(global::Grpc.services.Role), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.LoginRequest), global::Grpc.services.LoginRequest.Parser, new[]{ "Username", "Password", "AppName", "Imei", "IpAddress" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.UserSession), global::Grpc.services.UserSession.Parser, new[]{ "Username", "Token", "Roles", "AppVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.LogoutRequest), global::Grpc.services.LogoutRequest.Parser, new[]{ "Username", "AppName" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grpc.services.Appname), typeof(global::Grpc.services.Role), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.LoginRequest), global::Grpc.services.LoginRequest.Parser, new[]{ "Username", "Password", "AppName", "Imei", "IpAddress", "AppVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.UserSession), global::Grpc.services.UserSession.Parser, new[]{ "Username", "Token", "Roles" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.LogoutRequest), global::Grpc.services.LogoutRequest.Parser, new[]{ "Username", "AppName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -94,6 +94,7 @@ namespace Grpc.services {
       appName_ = other.appName_;
       imei_ = other.imei_;
       ipAddress_ = other.ipAddress_;
+      appVersion_ = other.appVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -126,7 +127,7 @@ namespace Grpc.services {
 
     /// <summary>Field number for the "appName" field.</summary>
     public const int AppNameFieldNumber = 3;
-    private global::Grpc.services.Appname appName_ = 0;
+    private global::Grpc.services.Appname appName_ = global::Grpc.services.Appname.Noname;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Grpc.services.Appname AppName {
       get { return appName_; }
@@ -157,6 +158,17 @@ namespace Grpc.services {
       }
     }
 
+    /// <summary>Field number for the "appVersion" field.</summary>
+    public const int AppVersionFieldNumber = 6;
+    private int appVersion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AppVersion {
+      get { return appVersion_; }
+      set {
+        appVersion_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LoginRequest);
@@ -175,6 +187,7 @@ namespace Grpc.services {
       if (AppName != other.AppName) return false;
       if (Imei != other.Imei) return false;
       if (IpAddress != other.IpAddress) return false;
+      if (AppVersion != other.AppVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -183,9 +196,10 @@ namespace Grpc.services {
       int hash = 1;
       if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (Password.Length != 0) hash ^= Password.GetHashCode();
-      if (AppName != 0) hash ^= AppName.GetHashCode();
+      if (AppName != global::Grpc.services.Appname.Noname) hash ^= AppName.GetHashCode();
       if (Imei.Length != 0) hash ^= Imei.GetHashCode();
       if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
+      if (AppVersion != 0) hash ^= AppVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -207,7 +221,7 @@ namespace Grpc.services {
         output.WriteRawTag(18);
         output.WriteString(Password);
       }
-      if (AppName != 0) {
+      if (AppName != global::Grpc.services.Appname.Noname) {
         output.WriteRawTag(24);
         output.WriteEnum((int) AppName);
       }
@@ -218,6 +232,10 @@ namespace Grpc.services {
       if (IpAddress.Length != 0) {
         output.WriteRawTag(42);
         output.WriteString(IpAddress);
+      }
+      if (AppVersion != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(AppVersion);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -233,7 +251,7 @@ namespace Grpc.services {
       if (Password.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
       }
-      if (AppName != 0) {
+      if (AppName != global::Grpc.services.Appname.Noname) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AppName);
       }
       if (Imei.Length != 0) {
@@ -241,6 +259,9 @@ namespace Grpc.services {
       }
       if (IpAddress.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddress);
+      }
+      if (AppVersion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AppVersion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,7 +280,7 @@ namespace Grpc.services {
       if (other.Password.Length != 0) {
         Password = other.Password;
       }
-      if (other.AppName != 0) {
+      if (other.AppName != global::Grpc.services.Appname.Noname) {
         AppName = other.AppName;
       }
       if (other.Imei.Length != 0) {
@@ -267,6 +288,9 @@ namespace Grpc.services {
       }
       if (other.IpAddress.Length != 0) {
         IpAddress = other.IpAddress;
+      }
+      if (other.AppVersion != 0) {
+        AppVersion = other.AppVersion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -297,6 +321,10 @@ namespace Grpc.services {
           }
           case 42: {
             IpAddress = input.ReadString();
+            break;
+          }
+          case 48: {
+            AppVersion = input.ReadInt32();
             break;
           }
         }
@@ -333,7 +361,6 @@ namespace Grpc.services {
       username_ = other.username_;
       token_ = other.token_;
       roles_ = other.roles_.Clone();
-      appVersion_ = other.appVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -374,17 +401,6 @@ namespace Grpc.services {
       get { return roles_; }
     }
 
-    /// <summary>Field number for the "appVersion" field.</summary>
-    public const int AppVersionFieldNumber = 4;
-    private int appVersion_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int AppVersion {
-      get { return appVersion_; }
-      set {
-        appVersion_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as UserSession);
@@ -401,7 +417,6 @@ namespace Grpc.services {
       if (Username != other.Username) return false;
       if (Token != other.Token) return false;
       if(!roles_.Equals(other.roles_)) return false;
-      if (AppVersion != other.AppVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -411,7 +426,6 @@ namespace Grpc.services {
       if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (Token.Length != 0) hash ^= Token.GetHashCode();
       hash ^= roles_.GetHashCode();
-      if (AppVersion != 0) hash ^= AppVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -434,10 +448,6 @@ namespace Grpc.services {
         output.WriteString(Token);
       }
       roles_.WriteTo(output, _repeated_roles_codec);
-      if (AppVersion != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(AppVersion);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -453,9 +463,6 @@ namespace Grpc.services {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
       }
       size += roles_.CalculateSize(_repeated_roles_codec);
-      if (AppVersion != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AppVersion);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -474,9 +481,6 @@ namespace Grpc.services {
         Token = other.Token;
       }
       roles_.Add(other.roles_);
-      if (other.AppVersion != 0) {
-        AppVersion = other.AppVersion;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -499,10 +503,6 @@ namespace Grpc.services {
           case 26:
           case 24: {
             roles_.AddEntriesFrom(input, _repeated_roles_codec);
-            break;
-          }
-          case 32: {
-            AppVersion = input.ReadInt32();
             break;
           }
         }
@@ -559,7 +559,7 @@ namespace Grpc.services {
 
     /// <summary>Field number for the "appName" field.</summary>
     public const int AppNameFieldNumber = 2;
-    private global::Grpc.services.Appname appName_ = 0;
+    private global::Grpc.services.Appname appName_ = global::Grpc.services.Appname.Noname;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Grpc.services.Appname AppName {
       get { return appName_; }
@@ -590,7 +590,7 @@ namespace Grpc.services {
     public override int GetHashCode() {
       int hash = 1;
       if (Username.Length != 0) hash ^= Username.GetHashCode();
-      if (AppName != 0) hash ^= AppName.GetHashCode();
+      if (AppName != global::Grpc.services.Appname.Noname) hash ^= AppName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -608,7 +608,7 @@ namespace Grpc.services {
         output.WriteRawTag(10);
         output.WriteString(Username);
       }
-      if (AppName != 0) {
+      if (AppName != global::Grpc.services.Appname.Noname) {
         output.WriteRawTag(16);
         output.WriteEnum((int) AppName);
       }
@@ -623,7 +623,7 @@ namespace Grpc.services {
       if (Username.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
       }
-      if (AppName != 0) {
+      if (AppName != global::Grpc.services.Appname.Noname) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AppName);
       }
       if (_unknownFields != null) {
@@ -640,7 +640,7 @@ namespace Grpc.services {
       if (other.Username.Length != 0) {
         Username = other.Username;
       }
-      if (other.AppName != 0) {
+      if (other.AppName != global::Grpc.services.Appname.Noname) {
         AppName = other.AppName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

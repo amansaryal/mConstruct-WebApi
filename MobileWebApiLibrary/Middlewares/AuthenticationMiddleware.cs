@@ -2,23 +2,23 @@
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 
-namespace MobileWebApiLibrary.Message_Handlers
+namespace MobileWebApiLibrary.Middlewares
 {
-    class UMSAuthMiddleware
+    class AuthenticationMiddleware
     {
         private readonly RequestDelegate _next;
         private readonly ILogger _logger;
 
-        public UMSAuthMiddleware(RequestDelegate next, ILoggerFactory logFactory)
+        public AuthenticationMiddleware(RequestDelegate next, ILoggerFactory logFactory)
         {
             _next = next;
 
-            _logger = logFactory.CreateLogger("UMSAuthMiddleware");
+            _logger = logFactory.CreateLogger("AuthenticationMiddleware");
         }
 
         public async Task Invoke(HttpContext httpContext)
         {
-            _logger.LogInformation("UMSAuthMiddleware executing..");
+            _logger.LogInformation("AuthenticationMiddleware executing..");
 
             //add user authentication code                       
 

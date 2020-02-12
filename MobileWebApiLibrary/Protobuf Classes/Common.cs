@@ -31,8 +31,8 @@ namespace Grpc.common {
             "Y29tbW9uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grpc.common.Layer), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.common.Response), global::Grpc.common.Response.Parser, new[]{ "Message" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grpc.common.Layer), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.common.Response), global::Grpc.common.Response.Parser, new[]{ "Message" }, null, null, null, null)
           }));
     }
     #endregion

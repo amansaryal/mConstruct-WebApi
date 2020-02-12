@@ -4,17 +4,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using MobileWebApiLibrary;
+using MobileWebApiLibrary.Formatters;
+using MobileWebApiLibrary.Action_Filters;
 using MobileWebApiLibrary.Middlewares;
 
 namespace Session_WebApi
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
+            _currentEnvironment = env;
             Configuration = configuration;           
         }
+
+        private readonly IHostingEnvironment _currentEnvironment;
 
         public IConfiguration Configuration { get; }
 
@@ -24,6 +28,7 @@ namespace Session_WebApi
             services.AddMvc(
                 options =>
                 {
+                    options.Filters.Add(new HttpResponseExceptionFilter(_currentEnvironment));
                     options.InputFormatters.Add(new ProtobufInputTypeFormatter());
                     options.OutputFormatters.Add(new ProtobufOutputTypeFormatter());                   
                     options.OutputFormatters.Add(new ProtoJsonOutputTypeFormatter());                   
@@ -32,7 +37,7 @@ namespace Session_WebApi
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Session Api", Version = "v1" });
             });
         }
 
@@ -41,11 +46,13 @@ namespace Session_WebApi
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
+                app.UseExceptionHandler("/error");
             }
             else
             {
                 app.UseHsts();
+                app.UseExceptionHandler("/error");
             }
 
             app.UseHttpsRedirection();
@@ -58,7 +65,7 @@ namespace Session_WebApi
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Session Api v1");
             });
         }
     }
