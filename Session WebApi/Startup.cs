@@ -7,12 +7,9 @@ using Microsoft.OpenApi.Models;
 using MobileWebApiLibrary.Formatters;
 using MobileWebApiLibrary.Action_Filters;
 using MobileWebApiLibrary.Middlewares;
-using Microsoft.AspNetCore.Routing;
-using Microsoft.AspNetCore.Mvc.Routing;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 using System.Linq;
-using MobileWebApiLibrary.Swagger;
 
 namespace Session_WebApi
 {
@@ -41,22 +38,26 @@ namespace Session_WebApi
                 }            
                 ).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddApiVersioning();
+            //api versioning conflicts with exception handler routes, thus disabling any and all kinds of global exception handling. hence it is disabled.
+            //use explicit versioning in controller routes
+            //but use the ApiVersioningAttribute to generate swagger doc as shown below
+            //services.AddApiVersioning(); 
 
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "Session Api v1", Version = "v1" });
+                options.SwaggerDoc("v2", new OpenApiInfo { Title = "Session Api v2", Version = "v2" });
 
-                // This call remove version from parameter, without it we will have version as parameter 
-                // for all endpoints in swagger UI
-                options.OperationFilter<RemoveVersionFromParameter>();
+                //// This call remove version from parameter, without it we will have version as parameter 
+                //// for all endpoints in swagger UI
+                //options.OperationFilter<RemoveVersionFromParameter>(); //use when api versioning is enabled
 
-                // This make replacement of v{version:apiVersion} to real version of corresponding swagger doc.
-                options.DocumentFilter<ReplaceVersionWithExactValueInPath>();
+                //// This make replacement of v{version:apiVersion} to real version of corresponding swagger doc.
+                //options.DocumentFilter<ReplaceVersionWithExactValueInPath>(); //use when api versioning is enabled
 
-                //This tells swagger what all actions are to be shown in the given version
+                ////This tells swagger what all actions are to be shown in the given version
                 options.DocInclusionPredicate((docName, apiDesc) =>
-                 {                    
+                 {
                      if (!apiDesc.TryGetMethodInfo(out MethodInfo methodInfo)) return false;
 
                      var versions = methodInfo.DeclaringType
@@ -93,7 +94,8 @@ namespace Session_WebApi
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Session Api v1");
+                c.SwaggerEndpoint($"/swagger/v1/swagger.json", $"v1");
+                c.SwaggerEndpoint($"/swagger/v2/swagger.json", $"v2");
             });
         }
     }

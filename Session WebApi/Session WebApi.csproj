@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Action Filters\**" />
+    <Content Remove="Action Filters\**" />
+    <EmbeddedResource Remove="Action Filters\**" />
+    <None Remove="Action Filters\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

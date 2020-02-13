@@ -7,39 +7,36 @@ using MobileWebApiLibrary.Controllers;
 using System;
 using System.Threading.Tasks;
 
-namespace Session_WebApi.Controllers.V1
+namespace Session_WebApi.Controllers.V2
 {
-    [ApiVersion("1")]
+    [ApiVersion("2")]
     //[Route("SessionApi/v{version:apiVersion}/")]
-    [Route("SessionApi/v1")]
+    [Route("SessionApi/v2/")]
     public class SessionController : BaseController
     {
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(GISStatusCodes.Status911UnsupportedAppVersion)]
         [Route("[action]")]
         [HttpPost]
         public async Task<ActionResult<UserSession>> Login([FromBody] LoginRequest loginRequest)
         {
-            if (string.IsNullOrEmpty(loginRequest.Username) || string.IsNullOrEmpty(loginRequest.Password))
-                throw new HttpResponseException
-                {
-                    Status = StatusCodes.Status401Unauthorized,
-                    Value = new ProblemDetails
-                    {
-                        Status = StatusCodes.Status401Unauthorized,
-                        Instance = HttpContext.Request.Path.Value,
-                        Title = "Empty username or password",
-                        Detail = string.Format("Username is {0}", loginRequest.Username)
-                    }
-                };
+            //if (string.IsNullOrEmpty(loginRequest.Username) || string.IsNullOrEmpty(loginRequest.Password))
+            //    throw new HttpResponseException
+            //    {
+            //        Status = StatusCodes.Status401Unauthorized,
+            //        Value = new ProblemDetails
+            //        {
+            //            Status = StatusCodes.Status401Unauthorized,
+            //            Instance = HttpContext.Request.Path.Value,
+            //            Title = "Empty username or password",
+            //            Detail = string.Format("Username is {0}", loginRequest.Username)
+            //        }
+            //    };
 
 
-            validateApp(loginRequest.AppName, loginRequest.AppVersion);
+            //validateApp(loginRequest.AppName, loginRequest.AppVersion);
 
-            //authenticate user
-            await AuthenticateUserInUMS(loginRequest.Username, loginRequest.Password);
-
+            ////authenticate user
+            //await AuthenticateUserInUMS(loginRequest.Username, loginRequest.Password);
+            throw new Exception("Fuck");
             UserSession userSession = new UserSession();
             userSession.Token = "abcd";
             userSession.Roles.Add(Role.FieldEngineer);
@@ -111,12 +108,13 @@ namespace Session_WebApi.Controllers.V1
                         Status = StatusCodes.Status400BadRequest,
                         Instance = HttpContext.Request.Path.Value,
                         Title = "Invalid application version",
-                        Detail = "AppVersion can not be 0"
+                        Detail = "Application version can not be 0"
                     }
                 };
 
             //get latest app version
-            AppVersions.appVersionMappings.TryGetValue(appName, out int latestAppVersion);
+            int latestAppVersion = -1;
+            AppVersions.appVersionMappings.TryGetValue(appName, out latestAppVersion);
 
             //if equal then it's valid
             if (appVersion == latestAppVersion)
@@ -129,8 +127,8 @@ namespace Session_WebApi.Controllers.V1
                 {
                     Status = GISStatusCodes.Status911UnsupportedAppVersion,
                     Instance = HttpContext.Request.Path.Value,
-                    Title = "This app version is no longer supported. Please update the app",
-                    Detail = string.Format("Provided appVersion = {0} is different than latest appVersion = {1}.", appVersion, latestAppVersion)
+                    Title = "This app version is no longer supported. Please update to the latest version from Airwatch.",
+                    Detail = string.Format("AppVersion : {0} is different than latest appversion : {1}.", appVersion, latestAppVersion)
                 }
             };
 
