@@ -24,7 +24,7 @@ namespace Session_WebApi
                 // Prepare web request...
                 HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
                 webRequest.Method = "POST";
-                webRequest.ContentType = "application/x-protobuf";
+                webRequest.ContentType = "application/protobuf";
                 webRequest.ContentLength = data.Length;
                 using (Stream postStream = webRequest.GetRequestStream())
                 {
@@ -53,8 +53,8 @@ namespace Session_WebApi
                 // Prepare web request...
                 HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
                 webRequest.Method = "POST";
-                webRequest.ContentType = "application/x-protobuf";
-                webRequest.Accept = "application/x-protobuf";
+                webRequest.ContentType = "application/protobuf";
+                webRequest.Accept = "application/protobuf";
                 webRequest.Headers.Add("X-Secure", "true");
                 webRequest.ContentLength = data.Length;
                 using (Stream postStream = webRequest.GetRequestStream())

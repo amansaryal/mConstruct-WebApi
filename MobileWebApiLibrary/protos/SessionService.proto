@@ -12,6 +12,7 @@ service Session{
 enum Appname{
 	NONAME = 0;
 	MCONSTRUCT = 1;
+	ONMRFS = 2;
 }
 
 enum Role{

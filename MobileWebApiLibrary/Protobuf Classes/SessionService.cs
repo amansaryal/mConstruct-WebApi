@@ -31,12 +31,12 @@ namespace Grpc.services {
             "ASgFIkQKC1VzZXJTZXNzaW9uEhAKCHVzZXJuYW1lGAEgASgJEg0KBXRva2Vu",
             "GAIgASgJEhQKBXJvbGVzGAMgAygOMgUuUm9sZSI8Cg1Mb2dvdXRSZXF1ZXN0",
             "EhAKCHVzZXJuYW1lGAEgASgJEhkKB2FwcE5hbWUYAiABKA4yCC5BcHBuYW1l",
-            "KiUKB0FwcG5hbWUSCgoGTk9OQU1FEAASDgoKTUNPTlNUUlVDVBABKk0KBFJv",
-            "bGUSCwoHTk9fUk9MRRAAEhIKDkZJRUxEX0VOR0lORUVSEAESFAoQUVVBTElU",
-            "WV9FTkdJTkVFUhACEg4KCklORlJBX0xFQUQQAzJUCgdTZXNzaW9uEiQKBUxv",
-            "Z2luEg0uTG9naW5SZXF1ZXN0GgwuVXNlclNlc3Npb24SIwoGTG9nb3V0Eg4u",
-            "TG9nb3V0UmVxdWVzdBoJLlJlc3BvbnNlQikKF2NvbS5tQ29uc3RydWN0LnBy",
-            "b3RvYnVmqgINR3JwYy5zZXJ2aWNlc2IGcHJvdG8z"));
+            "KjEKB0FwcG5hbWUSCgoGTk9OQU1FEAASDgoKTUNPTlNUUlVDVBABEgoKBk9O",
+            "TVJGUxACKk0KBFJvbGUSCwoHTk9fUk9MRRAAEhIKDkZJRUxEX0VOR0lORUVS",
+            "EAESFAoQUVVBTElUWV9FTkdJTkVFUhACEg4KCklORlJBX0xFQUQQAzJUCgdT",
+            "ZXNzaW9uEiQKBUxvZ2luEg0uTG9naW5SZXF1ZXN0GgwuVXNlclNlc3Npb24S",
+            "IwoGTG9nb3V0Eg4uTG9nb3V0UmVxdWVzdBoJLlJlc3BvbnNlQikKF2NvbS5t",
+            "Q29uc3RydWN0LnByb3RvYnVmqgINR3JwYy5zZXJ2aWNlc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Grpc.common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grpc.services.Appname), typeof(global::Grpc.services.Role), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -52,6 +52,7 @@ namespace Grpc.services {
   public enum Appname {
     [pbr::OriginalName("NONAME")] Noname = 0,
     [pbr::OriginalName("MCONSTRUCT")] Mconstruct = 1,
+    [pbr::OriginalName("ONMRFS")] Onmrfs = 2,
   }
 
   public enum Role {
