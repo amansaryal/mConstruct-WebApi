@@ -5,9 +5,10 @@ using MobileWebApiLibrary;
 using MobileWebApiLibrary.Action_Filters;
 using MobileWebApiLibrary.Controllers;
 
-namespace Session_WebApi.Controllers
+namespace Session_WebApi.Controllers.V1
 {
-    [Route("SessionApi/")]
+    [ApiVersion("1")]
+    [Route("SessionApi/v{version:apiVersion}/")]
     public class SessionController : BaseController
     {
         [Route("[action]")]
