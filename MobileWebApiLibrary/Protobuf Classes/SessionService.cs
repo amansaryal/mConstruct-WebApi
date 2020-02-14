@@ -25,23 +25,26 @@ namespace Grpc.services {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chtwcm90b3MvU2Vzc2lvblNlcnZpY2UucHJvdG8aE3Byb3Rvcy9Db21tb24u",
-            "cHJvdG8iggEKDExvZ2luUmVxdWVzdBIQCgh1c2VybmFtZRgBIAEoCRIQCghw",
-            "YXNzd29yZBgCIAEoCRIZCgdhcHBOYW1lGAMgASgOMgguQXBwbmFtZRIMCgRp",
-            "bWVpGAQgASgJEhEKCWlwQWRkcmVzcxgFIAEoCRISCgphcHBWZXJzaW9uGAYg",
-            "ASgFIkQKC1VzZXJTZXNzaW9uEhAKCHVzZXJuYW1lGAEgASgJEg0KBXRva2Vu",
-            "GAIgASgJEhQKBXJvbGVzGAMgAygOMgUuUm9sZSI8Cg1Mb2dvdXRSZXF1ZXN0",
-            "EhAKCHVzZXJuYW1lGAEgASgJEhkKB2FwcE5hbWUYAiABKA4yCC5BcHBuYW1l",
-            "KjEKB0FwcG5hbWUSCgoGTk9OQU1FEAASDgoKTUNPTlNUUlVDVBABEgoKBk9O",
-            "TVJGUxACKk0KBFJvbGUSCwoHTk9fUk9MRRAAEhIKDkZJRUxEX0VOR0lORUVS",
-            "EAESFAoQUVVBTElUWV9FTkdJTkVFUhACEg4KCklORlJBX0xFQUQQAzJUCgdT",
-            "ZXNzaW9uEiQKBUxvZ2luEg0uTG9naW5SZXF1ZXN0GgwuVXNlclNlc3Npb24S",
-            "IwoGTG9nb3V0Eg4uTG9nb3V0UmVxdWVzdBoJLlJlc3BvbnNlQikKF2NvbS5t",
-            "Q29uc3RydWN0LnByb3RvYnVmqgINR3JwYy5zZXJ2aWNlc2IGcHJvdG8z"));
+            "cHJvdG8iMwoHVU1TRGF0YRIZCgdhcHBuYW1lGAEgASgOMgguQXBwbmFtZRIN",
+            "CgVyb2xlcxgCIAMoCSKCAQoMTG9naW5SZXF1ZXN0EhAKCHVzZXJuYW1lGAEg",
+            "ASgJEhAKCHBhc3N3b3JkGAIgASgJEhkKB2FwcE5hbWUYAyABKA4yCC5BcHBu",
+            "YW1lEgwKBGltZWkYBCABKAkSEQoJaXBBZGRyZXNzGAUgASgJEhIKCmFwcFZl",
+            "cnNpb24YBiABKAUinQEKC1VzZXJTZXNzaW9uEhAKCHVzZXJuYW1lGAEgASgJ",
+            "Eg0KBXRva2VuGAIgASgJEjAKCnVtc0RldGFpbHMYAyADKAsyHC5Vc2VyU2Vz",
+            "c2lvbi5VbXNEZXRhaWxzRW50cnkaOwoPVW1zRGV0YWlsc0VudHJ5EgsKA2tl",
+            "eRgBIAEoBRIXCgV2YWx1ZRgCIAEoCzIILlVNU0RhdGE6AjgBIjwKDUxvZ291",
+            "dFJlcXVlc3QSEAoIdXNlcm5hbWUYASABKAkSGQoHYXBwTmFtZRgCIAEoDjII",
+            "LkFwcG5hbWUqMQoHQXBwbmFtZRIKCgZOT05BTUUQABIOCgpNQ09OU1RSVUNU",
+            "EAESCgoGT05NUkZTEAIyVAoHU2Vzc2lvbhIkCgVMb2dpbhINLkxvZ2luUmVx",
+            "dWVzdBoMLlVzZXJTZXNzaW9uEiMKBkxvZ291dBIOLkxvZ291dFJlcXVlc3Qa",
+            "CS5SZXNwb25zZUIpChdjb20ubUNvbnN0cnVjdC5wcm90b2J1ZqoCDUdycGMu",
+            "c2VydmljZXNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Grpc.common.CommonReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grpc.services.Appname), typeof(global::Grpc.services.Role), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grpc.services.Appname), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.UMSData), global::Grpc.services.UMSData.Parser, new[]{ "Appname", "Roles" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.LoginRequest), global::Grpc.services.LoginRequest.Parser, new[]{ "Username", "Password", "AppName", "Imei", "IpAddress", "AppVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.UserSession), global::Grpc.services.UserSession.Parser, new[]{ "Username", "Token", "Roles" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.UserSession), global::Grpc.services.UserSession.Parser, new[]{ "Username", "Token", "UmsDetails" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.LogoutRequest), global::Grpc.services.LogoutRequest.Parser, new[]{ "Username", "AppName" }, null, null, null, null)
           }));
     }
@@ -55,16 +58,158 @@ namespace Grpc.services {
     [pbr::OriginalName("ONMRFS")] Onmrfs = 2,
   }
 
-  public enum Role {
-    [pbr::OriginalName("NO_ROLE")] NoRole = 0,
-    [pbr::OriginalName("FIELD_ENGINEER")] FieldEngineer = 1,
-    [pbr::OriginalName("QUALITY_ENGINEER")] QualityEngineer = 2,
-    [pbr::OriginalName("INFRA_LEAD")] InfraLead = 3,
-  }
-
   #endregion
 
   #region Messages
+  public sealed partial class UMSData : pb::IMessage<UMSData> {
+    private static readonly pb::MessageParser<UMSData> _parser = new pb::MessageParser<UMSData>(() => new UMSData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UMSData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Grpc.services.SessionServiceReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UMSData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UMSData(UMSData other) : this() {
+      appname_ = other.appname_;
+      roles_ = other.roles_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UMSData Clone() {
+      return new UMSData(this);
+    }
+
+    /// <summary>Field number for the "appname" field.</summary>
+    public const int AppnameFieldNumber = 1;
+    private global::Grpc.services.Appname appname_ = global::Grpc.services.Appname.Noname;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Grpc.services.Appname Appname {
+      get { return appname_; }
+      set {
+        appname_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "roles" field.</summary>
+    public const int RolesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_roles_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> roles_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Roles {
+      get { return roles_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UMSData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UMSData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Appname != other.Appname) return false;
+      if(!roles_.Equals(other.roles_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Appname != global::Grpc.services.Appname.Noname) hash ^= Appname.GetHashCode();
+      hash ^= roles_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Appname != global::Grpc.services.Appname.Noname) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Appname);
+      }
+      roles_.WriteTo(output, _repeated_roles_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Appname != global::Grpc.services.Appname.Noname) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Appname);
+      }
+      size += roles_.CalculateSize(_repeated_roles_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UMSData other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Appname != global::Grpc.services.Appname.Noname) {
+        Appname = other.Appname;
+      }
+      roles_.Add(other.roles_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Appname = (global::Grpc.services.Appname) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            roles_.AddEntriesFrom(input, _repeated_roles_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class LoginRequest : pb::IMessage<LoginRequest> {
     private static readonly pb::MessageParser<LoginRequest> _parser = new pb::MessageParser<LoginRequest>(() => new LoginRequest());
     private pb::UnknownFieldSet _unknownFields;
@@ -73,7 +218,7 @@ namespace Grpc.services {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.services.SessionServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Grpc.services.SessionServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -342,7 +487,7 @@ namespace Grpc.services {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.services.SessionServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Grpc.services.SessionServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -361,7 +506,7 @@ namespace Grpc.services {
     public UserSession(UserSession other) : this() {
       username_ = other.username_;
       token_ = other.token_;
-      roles_ = other.roles_.Clone();
+      umsDetails_ = other.umsDetails_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -392,14 +537,14 @@ namespace Grpc.services {
       }
     }
 
-    /// <summary>Field number for the "roles" field.</summary>
-    public const int RolesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Grpc.services.Role> _repeated_roles_codec
-        = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::Grpc.services.Role) x);
-    private readonly pbc::RepeatedField<global::Grpc.services.Role> roles_ = new pbc::RepeatedField<global::Grpc.services.Role>();
+    /// <summary>Field number for the "umsDetails" field.</summary>
+    public const int UmsDetailsFieldNumber = 3;
+    private static readonly pbc::MapField<int, global::Grpc.services.UMSData>.Codec _map_umsDetails_codec
+        = new pbc::MapField<int, global::Grpc.services.UMSData>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Grpc.services.UMSData.Parser), 26);
+    private readonly pbc::MapField<int, global::Grpc.services.UMSData> umsDetails_ = new pbc::MapField<int, global::Grpc.services.UMSData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Grpc.services.Role> Roles {
-      get { return roles_; }
+    public pbc::MapField<int, global::Grpc.services.UMSData> UmsDetails {
+      get { return umsDetails_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -417,7 +562,7 @@ namespace Grpc.services {
       }
       if (Username != other.Username) return false;
       if (Token != other.Token) return false;
-      if(!roles_.Equals(other.roles_)) return false;
+      if (!UmsDetails.Equals(other.UmsDetails)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -426,7 +571,7 @@ namespace Grpc.services {
       int hash = 1;
       if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (Token.Length != 0) hash ^= Token.GetHashCode();
-      hash ^= roles_.GetHashCode();
+      hash ^= UmsDetails.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -448,7 +593,7 @@ namespace Grpc.services {
         output.WriteRawTag(18);
         output.WriteString(Token);
       }
-      roles_.WriteTo(output, _repeated_roles_codec);
+      umsDetails_.WriteTo(output, _map_umsDetails_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -463,7 +608,7 @@ namespace Grpc.services {
       if (Token.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
       }
-      size += roles_.CalculateSize(_repeated_roles_codec);
+      size += umsDetails_.CalculateSize(_map_umsDetails_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -481,7 +626,7 @@ namespace Grpc.services {
       if (other.Token.Length != 0) {
         Token = other.Token;
       }
-      roles_.Add(other.roles_);
+      umsDetails_.Add(other.umsDetails_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -501,9 +646,8 @@ namespace Grpc.services {
             Token = input.ReadString();
             break;
           }
-          case 26:
-          case 24: {
-            roles_.AddEntriesFrom(input, _repeated_roles_codec);
+          case 26: {
+            umsDetails_.AddEntriesFrom(input, _map_umsDetails_codec);
             break;
           }
         }
@@ -520,7 +664,7 @@ namespace Grpc.services {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.services.SessionServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Grpc.services.SessionServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

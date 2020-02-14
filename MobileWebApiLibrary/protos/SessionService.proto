@@ -15,11 +15,16 @@ enum Appname{
 	ONMRFS = 2;
 }
 
-enum Role{
-	NO_ROLE = 0;
-	FIELD_ENGINEER = 1;
-	QUALITY_ENGINEER = 2;
-	INFRA_LEAD = 3;
+//enum Role{
+//	NO_ROLE = 0;
+//	FIELD_ENGINEER = 1;
+//	QUALITY_ENGINEER = 2;
+//	INFRA_LEAD = 3;
+//}
+
+message UMSData{
+	Appname appname = 1;
+	repeated string roles = 2;	
 }
 
 message LoginRequest{
@@ -34,7 +39,7 @@ message LoginRequest{
 message UserSession{
 	string username = 1;
 	string token = 2;
-	repeated Role roles = 3;
+	map<int32,UMSData> umsDetails = 3;
 }
 
 message LogoutRequest{

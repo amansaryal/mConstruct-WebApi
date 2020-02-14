@@ -5,7 +5,12 @@ using MobileWebApiLibrary;
 using MobileWebApiLibrary.Action_Filters;
 using MobileWebApiLibrary.Controllers;
 using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace Session_WebApi.Controllers.V1
 {
@@ -40,48 +45,38 @@ namespace Session_WebApi.Controllers.V1
             //authenticate user
             await AuthenticateUserInUMS(loginRequest.Username, loginRequest.Password);
 
-            UserSession userSession = new UserSession();
-            userSession.Token = "abcd";
-            userSession.Roles.Add(Role.FieldEngineer);
+            ;
 
-            
+            UserSession userSession = new UserSession();
+            userSession.Username = loginRequest.Username;
+            userSession.UmsDetails.Add((int)loginRequest.AppName, await GetRoles(loginRequest.Username, loginRequest.AppName));
+
             return userSession;
 
         }
 
-        [ApiExplorerSettings(IgnoreApi = true)]
-        public async Task AuthenticateUserInUMS(string username, string password)
+        private async Task AuthenticateUserInUMS(string username, string password)
         {
-            //create UMS Service instance
-            UMSService.UserProviderClient umsServiceProvider = new UMSService.UserProviderClient();
-
-            try
+            UmsService.AuthenticateUserResponse authenticateUserResponse = await new UmsService.UserProviderClient().AuthenticateUserAsync(new UmsService.AuthenticateUserRequest
             {
-                UMSService.AuthenticateUserResponse authenticateUserResponse = await umsServiceProvider.AuthenticateUserAsync(new UMSService.AuthenticateUserRequest
-                {
-                    userName = username,
-                    password = password
-                });
+                userName = username,
+                password = password
+            });
 
-                if (authenticateUserResponse.AuthenticateUserResult == false)
+            if (authenticateUserResponse.AuthenticateUserResult == false)
+            {
+                throw new HttpResponseException
                 {
-                    throw new HttpResponseException
+                    Status = StatusCodes.Status401Unauthorized,
+                    Value = new ProblemDetails
                     {
                         Status = StatusCodes.Status401Unauthorized,
-                        Value = new ProblemDetails
-                        {
-                            Status = StatusCodes.Status401Unauthorized,
-                            Instance = HttpContext.Request.Path.Value,
-                            Title = authenticateUserResponse.dbError,
-                            Detail = authenticateUserResponse.dbError
-                        }
-                    };
-                }
+                        Instance = HttpContext.Request.Path.Value,
+                        Title = authenticateUserResponse.dbError,
+                        Detail = authenticateUserResponse.dbError
+                    }
+                };
             }
-            catch(Exception ex)
-            {
-                throw ex;
-            }            
         }
 
         private ActionResult<bool> validateApp(Appname appName, int appVersion)
@@ -134,6 +129,44 @@ namespace Session_WebApi.Controllers.V1
                 }
             };
 
+        }
+
+        private async Task<UMSData> GetRoles(string username, Appname appname)
+        {
+            UMSBindings.UmsAppUrlMap.TryGetValue(appname, out string appUrl);
+            UmsService.GetUserAppDetailsbyUserNameApplicationUrlResponse response = await new UmsService.UserProviderClient().GetUserAppDetailsbyUserNameApplicationUrlAsync(new UmsService.GetUserAppDetailsbyUserNameApplicationUrlRequest {
+                userName = username,
+                applicationUrl = appUrl
+            });
+
+            var result = response.GetUserAppDetailsbyUserNameApplicationUrlResult;
+
+            //initialize returned role list
+            var umsData = new UMSData();
+            umsData.Appname = appname;
+
+            //create a data set from returned xelement list
+            DataSet dataSet = new DataSet();
+
+            //read schema 
+            dataSet.ReadXmlSchema(new StringReader(result.Nodes[0].ToString()));
+            //read data tables
+            for (int i = 1; i < result.Nodes.Count; i++)
+            {
+                dataSet.ReadXml(new StringReader(result.Nodes[i].ToString()));
+            }
+
+
+            if (dataSet.Tables.Count == 4 && dataSet.Tables[3] != null)
+            {
+                for (int i = 0; i < dataSet.Tables[3].Rows.Count; i++)
+                {
+                    var userRole = dataSet.Tables[3].Rows[i]["SUBGROUP_NAME"].ToString();
+                    umsData.Roles.Add(userRole);
+                }
+            }
+
+            return umsData;
         }
     }
 }

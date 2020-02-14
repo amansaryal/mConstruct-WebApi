@@ -7,226 +7,226 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UMSService
+namespace UmsService
 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UMSService.IUserProvider")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UmsService.IUserProvider")]
     public interface IUserProvider
     {
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/AuthenticateApplicationAccess", ReplyAction="http://tempuri.org/IUserProvider/AuthenticateApplicationAccessResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.AuthenticateApplicationAccessResponse> AuthenticateApplicationAccessAsync(UMSService.AuthenticateApplicationAccessRequest request);
+        System.Threading.Tasks.Task<UmsService.AuthenticateApplicationAccessResponse> AuthenticateApplicationAccessAsync(UmsService.AuthenticateApplicationAccessRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/AuthenticateUser", ReplyAction="http://tempuri.org/IUserProvider/AuthenticateUserResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.AuthenticateUserResponse> AuthenticateUserAsync(UMSService.AuthenticateUserRequest request);
+        System.Threading.Tasks.Task<UmsService.AuthenticateUserResponse> AuthenticateUserAsync(UmsService.AuthenticateUserRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetDomainUserDetails", ReplyAction="http://tempuri.org/IUserProvider/GetDomainUserDetailsResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetDomainUserDetailsResponse> GetDomainUserDetailsAsync(UMSService.GetDomainUserDetailsRequest request);
+        System.Threading.Tasks.Task<UmsService.GetDomainUserDetailsResponse> GetDomainUserDetailsAsync(UmsService.GetDomainUserDetailsRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetDomainUsers", ReplyAction="http://tempuri.org/IUserProvider/GetDomainUsersResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetDomainUsersResponse> GetDomainUsersAsync(UMSService.GetDomainUsersRequest request);
+        System.Threading.Tasks.Task<UmsService.GetDomainUsersResponse> GetDomainUsersAsync(UmsService.GetDomainUsersRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetErrorOnUserTable", ReplyAction="http://tempuri.org/IUserProvider/GetErrorOnUserTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetErrorOnUserTableResponse> GetErrorOnUserTableAsync(UMSService.GetErrorOnUserTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetErrorOnUserTableResponse> GetErrorOnUserTableAsync(UmsService.GetErrorOnUserTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetErrorTable", ReplyAction="http://tempuri.org/IUserProvider/GetErrorTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetErrorTableResponse> GetErrorTableAsync(UMSService.GetErrorTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetErrorTableResponse> GetErrorTableAsync(UmsService.GetErrorTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetGroupAllFeatureRelBoundaryTable", ReplyAction="http://tempuri.org/IUserProvider/GetGroupAllFeatureRelBoundaryTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetGroupAllFeatureRelBoundaryTableResponse> GetGroupAllFeatureRelBoundaryTableAsync(UMSService.GetGroupAllFeatureRelBoundaryTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetGroupAllFeatureRelBoundaryTableResponse> GetGroupAllFeatureRelBoundaryTableAsync(UmsService.GetGroupAllFeatureRelBoundaryTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetGroupAppAllTable", ReplyAction="http://tempuri.org/IUserProvider/GetGroupAppAllTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetGroupAppAllTableResponse> GetGroupAppAllTableAsync(UMSService.GetGroupAppAllTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetGroupAppAllTableResponse> GetGroupAppAllTableAsync(UmsService.GetGroupAppAllTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetGroupAppTable", ReplyAction="http://tempuri.org/IUserProvider/GetGroupAppTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetGroupAppTableResponse> GetGroupAppTableAsync(UMSService.GetGroupAppTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetGroupAppTableResponse> GetGroupAppTableAsync(UmsService.GetGroupAppTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetGroupBoundaryRelTable", ReplyAction="http://tempuri.org/IUserProvider/GetGroupBoundaryRelTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetGroupBoundaryRelTableResponse> GetGroupBoundaryRelTableAsync(UMSService.GetGroupBoundaryRelTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetGroupBoundaryRelTableResponse> GetGroupBoundaryRelTableAsync(UmsService.GetGroupBoundaryRelTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetGroupFeatureRelBoundaryTable", ReplyAction="http://tempuri.org/IUserProvider/GetGroupFeatureRelBoundaryTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetGroupFeatureRelBoundaryTableResponse> GetGroupFeatureRelBoundaryTableAsync(UMSService.GetGroupFeatureRelBoundaryTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetGroupFeatureRelBoundaryTableResponse> GetGroupFeatureRelBoundaryTableAsync(UmsService.GetGroupFeatureRelBoundaryTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetGroupPrivAllTable", ReplyAction="http://tempuri.org/IUserProvider/GetGroupPrivAllTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetGroupPrivAllTableResponse> GetGroupPrivAllTableAsync(UMSService.GetGroupPrivAllTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetGroupPrivAllTableResponse> GetGroupPrivAllTableAsync(UmsService.GetGroupPrivAllTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetGroupPrivTable", ReplyAction="http://tempuri.org/IUserProvider/GetGroupPrivTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetGroupPrivTableResponse> GetGroupPrivTableAsync(UMSService.GetGroupPrivTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetGroupPrivTableResponse> GetGroupPrivTableAsync(UmsService.GetGroupPrivTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetGroupUserFeaRelBoundaryTable", ReplyAction="http://tempuri.org/IUserProvider/GetGroupUserFeaRelBoundaryTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetGroupUserFeaRelBoundaryTableResponse> GetGroupUserFeaRelBoundaryTableAsync(UMSService.GetGroupUserFeaRelBoundaryTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetGroupUserFeaRelBoundaryTableResponse> GetGroupUserFeaRelBoundaryTableAsync(UmsService.GetGroupUserFeaRelBoundaryTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetRealtedUsersByUserLocationApplication", ReplyAction="http://tempuri.org/IUserProvider/GetRealtedUsersByUserLocationApplicationResponse" +
             "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetRealtedUsersByUserLocationApplicationResponse> GetRealtedUsersByUserLocationApplicationAsync(UMSService.GetRealtedUsersByUserLocationApplicationRequest request);
+        System.Threading.Tasks.Task<UmsService.GetRealtedUsersByUserLocationApplicationResponse> GetRealtedUsersByUserLocationApplicationAsync(UmsService.GetRealtedUsersByUserLocationApplicationRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetSubGroupAllFeatureRelBoundaryTable", ReplyAction="http://tempuri.org/IUserProvider/GetSubGroupAllFeatureRelBoundaryTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetSubGroupAllFeatureRelBoundaryTableResponse> GetSubGroupAllFeatureRelBoundaryTableAsync(UMSService.GetSubGroupAllFeatureRelBoundaryTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetSubGroupAllFeatureRelBoundaryTableResponse> GetSubGroupAllFeatureRelBoundaryTableAsync(UmsService.GetSubGroupAllFeatureRelBoundaryTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetSubGroupAppAllTable", ReplyAction="http://tempuri.org/IUserProvider/GetSubGroupAppAllTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetSubGroupAppAllTableResponse> GetSubGroupAppAllTableAsync(UMSService.GetSubGroupAppAllTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetSubGroupAppAllTableResponse> GetSubGroupAppAllTableAsync(UmsService.GetSubGroupAppAllTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetSubGroupAppTable", ReplyAction="http://tempuri.org/IUserProvider/GetSubGroupAppTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetSubGroupAppTableResponse> GetSubGroupAppTableAsync(UMSService.GetSubGroupAppTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetSubGroupAppTableResponse> GetSubGroupAppTableAsync(UmsService.GetSubGroupAppTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetSubGroupBoundaryRelTable", ReplyAction="http://tempuri.org/IUserProvider/GetSubGroupBoundaryRelTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetSubGroupBoundaryRelTableResponse> GetSubGroupBoundaryRelTableAsync(UMSService.GetSubGroupBoundaryRelTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetSubGroupBoundaryRelTableResponse> GetSubGroupBoundaryRelTableAsync(UmsService.GetSubGroupBoundaryRelTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetSubGroupFeatureRelBoundaryTable", ReplyAction="http://tempuri.org/IUserProvider/GetSubGroupFeatureRelBoundaryTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetSubGroupFeatureRelBoundaryTableResponse> GetSubGroupFeatureRelBoundaryTableAsync(UMSService.GetSubGroupFeatureRelBoundaryTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetSubGroupFeatureRelBoundaryTableResponse> GetSubGroupFeatureRelBoundaryTableAsync(UmsService.GetSubGroupFeatureRelBoundaryTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetSubGroupPrivAllTable", ReplyAction="http://tempuri.org/IUserProvider/GetSubGroupPrivAllTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetSubGroupPrivAllTableResponse> GetSubGroupPrivAllTableAsync(UMSService.GetSubGroupPrivAllTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetSubGroupPrivAllTableResponse> GetSubGroupPrivAllTableAsync(UmsService.GetSubGroupPrivAllTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetSubGroupPrivTable", ReplyAction="http://tempuri.org/IUserProvider/GetSubGroupPrivTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetSubGroupPrivTableResponse> GetSubGroupPrivTableAsync(UMSService.GetSubGroupPrivTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetSubGroupPrivTableResponse> GetSubGroupPrivTableAsync(UmsService.GetSubGroupPrivTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetSubGroupsbyUserNameApplicationUrl", ReplyAction="http://tempuri.org/IUserProvider/GetSubGroupsbyUserNameApplicationUrlResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetSubGroupsbyUserNameApplicationUrlResponse> GetSubGroupsbyUserNameApplicationUrlAsync(UMSService.GetSubGroupsbyUserNameApplicationUrlRequest request);
+        System.Threading.Tasks.Task<UmsService.GetSubGroupsbyUserNameApplicationUrlResponse> GetSubGroupsbyUserNameApplicationUrlAsync(UmsService.GetSubGroupsbyUserNameApplicationUrlRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetSubGroupUserFeaRelBoundaryTable", ReplyAction="http://tempuri.org/IUserProvider/GetSubGroupUserFeaRelBoundaryTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetSubGroupUserFeaRelBoundaryTableResponse> GetSubGroupUserFeaRelBoundaryTableAsync(UMSService.GetSubGroupUserFeaRelBoundaryTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetSubGroupUserFeaRelBoundaryTableResponse> GetSubGroupUserFeaRelBoundaryTableAsync(UmsService.GetSubGroupUserFeaRelBoundaryTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetTransactionTable", ReplyAction="http://tempuri.org/IUserProvider/GetTransactionTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetTransactionTableResponse> GetTransactionTableAsync(UMSService.GetTransactionTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetTransactionTableResponse> GetTransactionTableAsync(UmsService.GetTransactionTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserAllInGroupTable", ReplyAction="http://tempuri.org/IUserProvider/GetUserAllInGroupTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserAllInGroupTableResponse> GetUserAllInGroupTableAsync(UMSService.GetUserAllInGroupTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserAllInGroupTableResponse> GetUserAllInGroupTableAsync(UmsService.GetUserAllInGroupTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserAllInSubGroupTable", ReplyAction="http://tempuri.org/IUserProvider/GetUserAllInSubGroupTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserAllInSubGroupTableResponse> GetUserAllInSubGroupTableAsync(UMSService.GetUserAllInSubGroupTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserAllInSubGroupTableResponse> GetUserAllInSubGroupTableAsync(UmsService.GetUserAllInSubGroupTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserAllOnlyRegisterdTable", ReplyAction="http://tempuri.org/IUserProvider/GetUserAllOnlyRegisterdTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserAllOnlyRegisterdTableResponse> GetUserAllOnlyRegisterdTableAsync(UMSService.GetUserAllOnlyRegisterdTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserAllOnlyRegisterdTableResponse> GetUserAllOnlyRegisterdTableAsync(UmsService.GetUserAllOnlyRegisterdTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserAllRelToMasterTable", ReplyAction="http://tempuri.org/IUserProvider/GetUserAllRelToMasterTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserAllRelToMasterTableResponse> GetUserAllRelToMasterTableAsync(UMSService.GetUserAllRelToMasterTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserAllRelToMasterTableResponse> GetUserAllRelToMasterTableAsync(UmsService.GetUserAllRelToMasterTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserAllTypeTable", ReplyAction="http://tempuri.org/IUserProvider/GetUserAllTypeTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserAllTypeTableResponse> GetUserAllTypeTableAsync(UMSService.GetUserAllTypeTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserAllTypeTableResponse> GetUserAllTypeTableAsync(UmsService.GetUserAllTypeTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserAppDetailsbyUserNameApplicationUrl", ReplyAction="http://tempuri.org/IUserProvider/GetUserAppDetailsbyUserNameApplicationUrlRespons" +
             "e")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserAppDetailsbyUserNameApplicationUrlResponse> GetUserAppDetailsbyUserNameApplicationUrlAsync(UMSService.GetUserAppDetailsbyUserNameApplicationUrlRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserAppDetailsbyUserNameApplicationUrlResponse> GetUserAppDetailsbyUserNameApplicationUrlAsync(UmsService.GetUserAppDetailsbyUserNameApplicationUrlRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserDetails", ReplyAction="http://tempuri.org/IUserProvider/GetUserDetailsResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserDetailsResponse> GetUserDetailsAsync(UMSService.GetUserDetailsRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserDetailsResponse> GetUserDetailsAsync(UmsService.GetUserDetailsRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserDetailsbyGroupIDslocationID", ReplyAction="http://tempuri.org/IUserProvider/GetUserDetailsbyGroupIDslocationIDResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserDetailsbyGroupIDslocationIDResponse> GetUserDetailsbyGroupIDslocationIDAsync(UMSService.GetUserDetailsbyGroupIDslocationIDRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserDetailsbyGroupIDslocationIDResponse> GetUserDetailsbyGroupIDslocationIDAsync(UmsService.GetUserDetailsbyGroupIDslocationIDRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserDetailsbySubGroupIDslocationID", ReplyAction="http://tempuri.org/IUserProvider/GetUserDetailsbySubGroupIDslocationIDResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserDetailsbySubGroupIDslocationIDResponse> GetUserDetailsbySubGroupIDslocationIDAsync(UMSService.GetUserDetailsbySubGroupIDslocationIDRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserDetailsbySubGroupIDslocationIDResponse> GetUserDetailsbySubGroupIDslocationIDAsync(UmsService.GetUserDetailsbySubGroupIDslocationIDRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserR4GStatesbyUserNameApplicationUrl", ReplyAction="http://tempuri.org/IUserProvider/GetUserR4GStatesbyUserNameApplicationUrlResponse" +
             "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserR4GStatesbyUserNameApplicationUrlResponse> GetUserR4GStatesbyUserNameApplicationUrlAsync(UMSService.GetUserR4GStatesbyUserNameApplicationUrlRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserR4GStatesbyUserNameApplicationUrlResponse> GetUserR4GStatesbyUserNameApplicationUrlAsync(UmsService.GetUserR4GStatesbyUserNameApplicationUrlRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUsersGroupByStateCodeAPPURL", ReplyAction="http://tempuri.org/IUserProvider/GetUsersGroupByStateCodeAPPURLResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUsersGroupByStateCodeAPPURLResponse> GetUsersGroupByStateCodeAPPURLAsync(UMSService.GetUsersGroupByStateCodeAPPURLRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUsersGroupByStateCodeAPPURLResponse> GetUsersGroupByStateCodeAPPURLAsync(UmsService.GetUsersGroupByStateCodeAPPURLRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserRegisteredToGroupTable", ReplyAction="http://tempuri.org/IUserProvider/GetUserRegisteredToGroupTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserRegisteredToGroupTableResponse> GetUserRegisteredToGroupTableAsync(UMSService.GetUserRegisteredToGroupTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserRegisteredToGroupTableResponse> GetUserRegisteredToGroupTableAsync(UmsService.GetUserRegisteredToGroupTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserRelToMasterTable", ReplyAction="http://tempuri.org/IUserProvider/GetUserRelToMasterTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserRelToMasterTableResponse> GetUserRelToMasterTableAsync(UMSService.GetUserRelToMasterTableRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserRelToMasterTableResponse> GetUserRelToMasterTableAsync(UmsService.GetUserRelToMasterTableRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserSupervisors", ReplyAction="http://tempuri.org/IUserProvider/GetUserSupervisorsResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserSupervisorsResponse> GetUserSupervisorsAsync(UMSService.GetUserSupervisorsRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserSupervisorsResponse> GetUserSupervisorsAsync(UmsService.GetUserSupervisorsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/UserActivityLog", ReplyAction="http://tempuri.org/IUserProvider/UserActivityLogResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.UserActivityLogResponse> UserActivityLogAsync(UMSService.UserActivityLogRequest request);
+        System.Threading.Tasks.Task<UmsService.UserActivityLogResponse> UserActivityLogAsync(UmsService.UserActivityLogRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/UserRegisterSearch", ReplyAction="http://tempuri.org/IUserProvider/UserRegisterSearchResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.UserRegisterSearchResponse> UserRegisterSearchAsync(UMSService.UserRegisterSearchRequest request);
+        System.Threading.Tasks.Task<UmsService.UserRegisterSearchResponse> UserRegisterSearchAsync(UmsService.UserRegisterSearchRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserProvider/GetUserDetailsByApplicationUrl", ReplyAction="http://tempuri.org/IUserProvider/GetUserDetailsByApplicationUrlResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<UMSService.GetUserDetailsByApplicationUrlResponse> GetUserDetailsByApplicationUrlAsync(UMSService.GetUserDetailsByApplicationUrlRequest request);
+        System.Threading.Tasks.Task<UmsService.GetUserDetailsByApplicationUrlResponse> GetUserDetailsByApplicationUrlAsync(UmsService.GetUserDetailsByApplicationUrlRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1455,7 +1455,7 @@ namespace UMSService
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/R4G.Library.UserProvider")]
-        public UMSService.UserCache[] GetDomainUserDetailsResult;
+        public UmsService.UserCache[] GetDomainUserDetailsResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -1465,7 +1465,7 @@ namespace UMSService
         {
         }
         
-        public GetDomainUserDetailsResponse(UMSService.UserCache[] GetDomainUserDetailsResult, string dbError)
+        public GetDomainUserDetailsResponse(UmsService.UserCache[] GetDomainUserDetailsResult, string dbError)
         {
             this.GetDomainUserDetailsResult = GetDomainUserDetailsResult;
             this.dbError = dbError;
@@ -1594,7 +1594,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetErrorOnUserTableResponseGetErrorOnUserTableResult GetErrorOnUserTableResult;
+        public UmsService.GetErrorOnUserTableResponseGetErrorOnUserTableResult GetErrorOnUserTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -1604,7 +1604,7 @@ namespace UMSService
         {
         }
         
-        public GetErrorOnUserTableResponse(UMSService.GetErrorOnUserTableResponseGetErrorOnUserTableResult GetErrorOnUserTableResult, string dbError)
+        public GetErrorOnUserTableResponse(UmsService.GetErrorOnUserTableResponseGetErrorOnUserTableResult GetErrorOnUserTableResult, string dbError)
         {
             this.GetErrorOnUserTableResult = GetErrorOnUserTableResult;
             this.dbError = dbError;
@@ -1682,7 +1682,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetErrorTableResponseGetErrorTableResult GetErrorTableResult;
+        public UmsService.GetErrorTableResponseGetErrorTableResult GetErrorTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -1692,7 +1692,7 @@ namespace UMSService
         {
         }
         
-        public GetErrorTableResponse(UMSService.GetErrorTableResponseGetErrorTableResult GetErrorTableResult, string dbError)
+        public GetErrorTableResponse(UmsService.GetErrorTableResponseGetErrorTableResult GetErrorTableResult, string dbError)
         {
             this.GetErrorTableResult = GetErrorTableResult;
             this.dbError = dbError;
@@ -1758,7 +1758,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetGroupAllFeatureRelBoundaryTableResponseGetGroupAllFeatureRelBoundaryTableResult GetGroupAllFeatureRelBoundaryTableResult;
+        public UmsService.GetGroupAllFeatureRelBoundaryTableResponseGetGroupAllFeatureRelBoundaryTableResult GetGroupAllFeatureRelBoundaryTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -1768,7 +1768,7 @@ namespace UMSService
         {
         }
         
-        public GetGroupAllFeatureRelBoundaryTableResponse(UMSService.GetGroupAllFeatureRelBoundaryTableResponseGetGroupAllFeatureRelBoundaryTableResult GetGroupAllFeatureRelBoundaryTableResult, string dbError)
+        public GetGroupAllFeatureRelBoundaryTableResponse(UmsService.GetGroupAllFeatureRelBoundaryTableResponseGetGroupAllFeatureRelBoundaryTableResult GetGroupAllFeatureRelBoundaryTableResult, string dbError)
         {
             this.GetGroupAllFeatureRelBoundaryTableResult = GetGroupAllFeatureRelBoundaryTableResult;
             this.dbError = dbError;
@@ -1834,7 +1834,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetGroupAppAllTableResponseGetGroupAppAllTableResult GetGroupAppAllTableResult;
+        public UmsService.GetGroupAppAllTableResponseGetGroupAppAllTableResult GetGroupAppAllTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -1844,7 +1844,7 @@ namespace UMSService
         {
         }
         
-        public GetGroupAppAllTableResponse(UMSService.GetGroupAppAllTableResponseGetGroupAppAllTableResult GetGroupAppAllTableResult, string dbError)
+        public GetGroupAppAllTableResponse(UmsService.GetGroupAppAllTableResponseGetGroupAppAllTableResult GetGroupAppAllTableResult, string dbError)
         {
             this.GetGroupAppAllTableResult = GetGroupAppAllTableResult;
             this.dbError = dbError;
@@ -1859,13 +1859,13 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.RelationGroupApp relGroup;
+        public UmsService.RelationGroupApp relGroup;
         
         public GetGroupAppTableRequest()
         {
         }
         
-        public GetGroupAppTableRequest(UMSService.RelationGroupApp relGroup)
+        public GetGroupAppTableRequest(UmsService.RelationGroupApp relGroup)
         {
             this.relGroup = relGroup;
         }
@@ -1879,7 +1879,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.ArrayOfXElement GetGroupAppTableResult;
+        public UmsService.ArrayOfXElement GetGroupAppTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -1889,7 +1889,7 @@ namespace UMSService
         {
         }
         
-        public GetGroupAppTableResponse(UMSService.ArrayOfXElement GetGroupAppTableResult, string dbError)
+        public GetGroupAppTableResponse(UmsService.ArrayOfXElement GetGroupAppTableResult, string dbError)
         {
             this.GetGroupAppTableResult = GetGroupAppTableResult;
             this.dbError = dbError;
@@ -1963,7 +1963,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetGroupBoundaryRelTableResponseGetGroupBoundaryRelTableResult GetGroupBoundaryRelTableResult;
+        public UmsService.GetGroupBoundaryRelTableResponseGetGroupBoundaryRelTableResult GetGroupBoundaryRelTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -1973,7 +1973,7 @@ namespace UMSService
         {
         }
         
-        public GetGroupBoundaryRelTableResponse(UMSService.GetGroupBoundaryRelTableResponseGetGroupBoundaryRelTableResult GetGroupBoundaryRelTableResult, string dbError)
+        public GetGroupBoundaryRelTableResponse(UmsService.GetGroupBoundaryRelTableResponseGetGroupBoundaryRelTableResult GetGroupBoundaryRelTableResult, string dbError)
         {
             this.GetGroupBoundaryRelTableResult = GetGroupBoundaryRelTableResult;
             this.dbError = dbError;
@@ -2020,7 +2020,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.ArrayOfXElement GetGroupFeatureRelBoundaryTableResult;
+        public UmsService.ArrayOfXElement GetGroupFeatureRelBoundaryTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2030,7 +2030,7 @@ namespace UMSService
         {
         }
         
-        public GetGroupFeatureRelBoundaryTableResponse(UMSService.ArrayOfXElement GetGroupFeatureRelBoundaryTableResult, string dbError)
+        public GetGroupFeatureRelBoundaryTableResponse(UmsService.ArrayOfXElement GetGroupFeatureRelBoundaryTableResult, string dbError)
         {
             this.GetGroupFeatureRelBoundaryTableResult = GetGroupFeatureRelBoundaryTableResult;
             this.dbError = dbError;
@@ -2096,7 +2096,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetGroupPrivAllTableResponseGetGroupPrivAllTableResult GetGroupPrivAllTableResult;
+        public UmsService.GetGroupPrivAllTableResponseGetGroupPrivAllTableResult GetGroupPrivAllTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2106,7 +2106,7 @@ namespace UMSService
         {
         }
         
-        public GetGroupPrivAllTableResponse(UMSService.GetGroupPrivAllTableResponseGetGroupPrivAllTableResult GetGroupPrivAllTableResult, string dbError)
+        public GetGroupPrivAllTableResponse(UmsService.GetGroupPrivAllTableResponseGetGroupPrivAllTableResult GetGroupPrivAllTableResult, string dbError)
         {
             this.GetGroupPrivAllTableResult = GetGroupPrivAllTableResult;
             this.dbError = dbError;
@@ -2146,7 +2146,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.ArrayOfXElement GetGroupPrivTableResult;
+        public UmsService.ArrayOfXElement GetGroupPrivTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2156,7 +2156,7 @@ namespace UMSService
         {
         }
         
-        public GetGroupPrivTableResponse(UMSService.ArrayOfXElement GetGroupPrivTableResult, string dbError)
+        public GetGroupPrivTableResponse(UmsService.ArrayOfXElement GetGroupPrivTableResult, string dbError)
         {
             this.GetGroupPrivTableResult = GetGroupPrivTableResult;
             this.dbError = dbError;
@@ -2235,7 +2235,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetGroupUserFeaRelBoundaryTableResponseGetGroupUserFeaRelBoundaryTableResult GetGroupUserFeaRelBoundaryTableResult;
+        public UmsService.GetGroupUserFeaRelBoundaryTableResponseGetGroupUserFeaRelBoundaryTableResult GetGroupUserFeaRelBoundaryTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2245,7 +2245,7 @@ namespace UMSService
         {
         }
         
-        public GetGroupUserFeaRelBoundaryTableResponse(UMSService.GetGroupUserFeaRelBoundaryTableResponseGetGroupUserFeaRelBoundaryTableResult GetGroupUserFeaRelBoundaryTableResult, string dbError)
+        public GetGroupUserFeaRelBoundaryTableResponse(UmsService.GetGroupUserFeaRelBoundaryTableResponseGetGroupUserFeaRelBoundaryTableResult GetGroupUserFeaRelBoundaryTableResult, string dbError)
         {
             this.GetGroupUserFeaRelBoundaryTableResult = GetGroupUserFeaRelBoundaryTableResult;
             this.dbError = dbError;
@@ -2325,7 +2325,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetRealtedUsersByUserLocationApplicationResponseGetRealtedUsersByUserLocationApplicationResult GetRealtedUsersByUserLocationApplicationResult;
+        public UmsService.GetRealtedUsersByUserLocationApplicationResponseGetRealtedUsersByUserLocationApplicationResult GetRealtedUsersByUserLocationApplicationResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2335,7 +2335,7 @@ namespace UMSService
         {
         }
         
-        public GetRealtedUsersByUserLocationApplicationResponse(UMSService.GetRealtedUsersByUserLocationApplicationResponseGetRealtedUsersByUserLocationApplicationResult GetRealtedUsersByUserLocationApplicationResult, string dbError)
+        public GetRealtedUsersByUserLocationApplicationResponse(UmsService.GetRealtedUsersByUserLocationApplicationResponseGetRealtedUsersByUserLocationApplicationResult GetRealtedUsersByUserLocationApplicationResult, string dbError)
         {
             this.GetRealtedUsersByUserLocationApplicationResult = GetRealtedUsersByUserLocationApplicationResult;
             this.dbError = dbError;
@@ -2401,7 +2401,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetSubGroupAllFeatureRelBoundaryTableResponseGetSubGroupAllFeatureRelBoundaryTableResult GetSubGroupAllFeatureRelBoundaryTableResult;
+        public UmsService.GetSubGroupAllFeatureRelBoundaryTableResponseGetSubGroupAllFeatureRelBoundaryTableResult GetSubGroupAllFeatureRelBoundaryTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2411,7 +2411,7 @@ namespace UMSService
         {
         }
         
-        public GetSubGroupAllFeatureRelBoundaryTableResponse(UMSService.GetSubGroupAllFeatureRelBoundaryTableResponseGetSubGroupAllFeatureRelBoundaryTableResult GetSubGroupAllFeatureRelBoundaryTableResult, string dbError)
+        public GetSubGroupAllFeatureRelBoundaryTableResponse(UmsService.GetSubGroupAllFeatureRelBoundaryTableResponseGetSubGroupAllFeatureRelBoundaryTableResult GetSubGroupAllFeatureRelBoundaryTableResult, string dbError)
         {
             this.GetSubGroupAllFeatureRelBoundaryTableResult = GetSubGroupAllFeatureRelBoundaryTableResult;
             this.dbError = dbError;
@@ -2477,7 +2477,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetSubGroupAppAllTableResponseGetSubGroupAppAllTableResult GetSubGroupAppAllTableResult;
+        public UmsService.GetSubGroupAppAllTableResponseGetSubGroupAppAllTableResult GetSubGroupAppAllTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2487,7 +2487,7 @@ namespace UMSService
         {
         }
         
-        public GetSubGroupAppAllTableResponse(UMSService.GetSubGroupAppAllTableResponseGetSubGroupAppAllTableResult GetSubGroupAppAllTableResult, string dbError)
+        public GetSubGroupAppAllTableResponse(UmsService.GetSubGroupAppAllTableResponseGetSubGroupAppAllTableResult GetSubGroupAppAllTableResult, string dbError)
         {
             this.GetSubGroupAppAllTableResult = GetSubGroupAppAllTableResult;
             this.dbError = dbError;
@@ -2502,13 +2502,13 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.RelationSubGroupApp relSubGroup;
+        public UmsService.RelationSubGroupApp relSubGroup;
         
         public GetSubGroupAppTableRequest()
         {
         }
         
-        public GetSubGroupAppTableRequest(UMSService.RelationSubGroupApp relSubGroup)
+        public GetSubGroupAppTableRequest(UmsService.RelationSubGroupApp relSubGroup)
         {
             this.relSubGroup = relSubGroup;
         }
@@ -2522,7 +2522,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.ArrayOfXElement GetSubGroupAppTableResult;
+        public UmsService.ArrayOfXElement GetSubGroupAppTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2532,7 +2532,7 @@ namespace UMSService
         {
         }
         
-        public GetSubGroupAppTableResponse(UMSService.ArrayOfXElement GetSubGroupAppTableResult, string dbError)
+        public GetSubGroupAppTableResponse(UmsService.ArrayOfXElement GetSubGroupAppTableResult, string dbError)
         {
             this.GetSubGroupAppTableResult = GetSubGroupAppTableResult;
             this.dbError = dbError;
@@ -2610,7 +2610,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetSubGroupBoundaryRelTableResponseGetSubGroupBoundaryRelTableResult GetSubGroupBoundaryRelTableResult;
+        public UmsService.GetSubGroupBoundaryRelTableResponseGetSubGroupBoundaryRelTableResult GetSubGroupBoundaryRelTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2620,7 +2620,7 @@ namespace UMSService
         {
         }
         
-        public GetSubGroupBoundaryRelTableResponse(UMSService.GetSubGroupBoundaryRelTableResponseGetSubGroupBoundaryRelTableResult GetSubGroupBoundaryRelTableResult, string dbError)
+        public GetSubGroupBoundaryRelTableResponse(UmsService.GetSubGroupBoundaryRelTableResponseGetSubGroupBoundaryRelTableResult GetSubGroupBoundaryRelTableResult, string dbError)
         {
             this.GetSubGroupBoundaryRelTableResult = GetSubGroupBoundaryRelTableResult;
             this.dbError = dbError;
@@ -2671,7 +2671,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.ArrayOfXElement GetSubGroupFeatureRelBoundaryTableResult;
+        public UmsService.ArrayOfXElement GetSubGroupFeatureRelBoundaryTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2681,7 +2681,7 @@ namespace UMSService
         {
         }
         
-        public GetSubGroupFeatureRelBoundaryTableResponse(UMSService.ArrayOfXElement GetSubGroupFeatureRelBoundaryTableResult, string dbError)
+        public GetSubGroupFeatureRelBoundaryTableResponse(UmsService.ArrayOfXElement GetSubGroupFeatureRelBoundaryTableResult, string dbError)
         {
             this.GetSubGroupFeatureRelBoundaryTableResult = GetSubGroupFeatureRelBoundaryTableResult;
             this.dbError = dbError;
@@ -2747,7 +2747,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetSubGroupPrivAllTableResponseGetSubGroupPrivAllTableResult GetSubGroupPrivAllTableResult;
+        public UmsService.GetSubGroupPrivAllTableResponseGetSubGroupPrivAllTableResult GetSubGroupPrivAllTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2757,7 +2757,7 @@ namespace UMSService
         {
         }
         
-        public GetSubGroupPrivAllTableResponse(UMSService.GetSubGroupPrivAllTableResponseGetSubGroupPrivAllTableResult GetSubGroupPrivAllTableResult, string dbError)
+        public GetSubGroupPrivAllTableResponse(UmsService.GetSubGroupPrivAllTableResponseGetSubGroupPrivAllTableResult GetSubGroupPrivAllTableResult, string dbError)
         {
             this.GetSubGroupPrivAllTableResult = GetSubGroupPrivAllTableResult;
             this.dbError = dbError;
@@ -2800,7 +2800,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.ArrayOfXElement GetSubGroupPrivTableResult;
+        public UmsService.ArrayOfXElement GetSubGroupPrivTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2810,7 +2810,7 @@ namespace UMSService
         {
         }
         
-        public GetSubGroupPrivTableResponse(UMSService.ArrayOfXElement GetSubGroupPrivTableResult, string dbError)
+        public GetSubGroupPrivTableResponse(UmsService.ArrayOfXElement GetSubGroupPrivTableResult, string dbError)
         {
             this.GetSubGroupPrivTableResult = GetSubGroupPrivTableResult;
             this.dbError = dbError;
@@ -2890,7 +2890,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetSubGroupsbyUserNameApplicationUrlResponseGetSubGroupsbyUserNameApplicationUrlResult GetSubGroupsbyUserNameApplicationUrlResult;
+        public UmsService.GetSubGroupsbyUserNameApplicationUrlResponseGetSubGroupsbyUserNameApplicationUrlResult GetSubGroupsbyUserNameApplicationUrlResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2900,7 +2900,7 @@ namespace UMSService
         {
         }
         
-        public GetSubGroupsbyUserNameApplicationUrlResponse(UMSService.GetSubGroupsbyUserNameApplicationUrlResponseGetSubGroupsbyUserNameApplicationUrlResult GetSubGroupsbyUserNameApplicationUrlResult, string dbError)
+        public GetSubGroupsbyUserNameApplicationUrlResponse(UmsService.GetSubGroupsbyUserNameApplicationUrlResponseGetSubGroupsbyUserNameApplicationUrlResult GetSubGroupsbyUserNameApplicationUrlResult, string dbError)
         {
             this.GetSubGroupsbyUserNameApplicationUrlResult = GetSubGroupsbyUserNameApplicationUrlResult;
             this.dbError = dbError;
@@ -2983,7 +2983,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetSubGroupUserFeaRelBoundaryTableResponseGetSubGroupUserFeaRelBoundaryTableResult GetSubGroupUserFeaRelBoundaryTableResult;
+        public UmsService.GetSubGroupUserFeaRelBoundaryTableResponseGetSubGroupUserFeaRelBoundaryTableResult GetSubGroupUserFeaRelBoundaryTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -2993,7 +2993,7 @@ namespace UMSService
         {
         }
         
-        public GetSubGroupUserFeaRelBoundaryTableResponse(UMSService.GetSubGroupUserFeaRelBoundaryTableResponseGetSubGroupUserFeaRelBoundaryTableResult GetSubGroupUserFeaRelBoundaryTableResult, string dbError)
+        public GetSubGroupUserFeaRelBoundaryTableResponse(UmsService.GetSubGroupUserFeaRelBoundaryTableResponseGetSubGroupUserFeaRelBoundaryTableResult GetSubGroupUserFeaRelBoundaryTableResult, string dbError)
         {
             this.GetSubGroupUserFeaRelBoundaryTableResult = GetSubGroupUserFeaRelBoundaryTableResult;
             this.dbError = dbError;
@@ -3071,7 +3071,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetTransactionTableResponseGetTransactionTableResult GetTransactionTableResult;
+        public UmsService.GetTransactionTableResponseGetTransactionTableResult GetTransactionTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3081,7 +3081,7 @@ namespace UMSService
         {
         }
         
-        public GetTransactionTableResponse(UMSService.GetTransactionTableResponseGetTransactionTableResult GetTransactionTableResult, string dbError)
+        public GetTransactionTableResponse(UmsService.GetTransactionTableResponseGetTransactionTableResult GetTransactionTableResult, string dbError)
         {
             this.GetTransactionTableResult = GetTransactionTableResult;
             this.dbError = dbError;
@@ -3155,7 +3155,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetUserAllInGroupTableResponseGetUserAllInGroupTableResult GetUserAllInGroupTableResult;
+        public UmsService.GetUserAllInGroupTableResponseGetUserAllInGroupTableResult GetUserAllInGroupTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3165,7 +3165,7 @@ namespace UMSService
         {
         }
         
-        public GetUserAllInGroupTableResponse(UMSService.GetUserAllInGroupTableResponseGetUserAllInGroupTableResult GetUserAllInGroupTableResult, string dbError)
+        public GetUserAllInGroupTableResponse(UmsService.GetUserAllInGroupTableResponseGetUserAllInGroupTableResult GetUserAllInGroupTableResult, string dbError)
         {
             this.GetUserAllInGroupTableResult = GetUserAllInGroupTableResult;
             this.dbError = dbError;
@@ -3243,7 +3243,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetUserAllInSubGroupTableResponseGetUserAllInSubGroupTableResult GetUserAllInSubGroupTableResult;
+        public UmsService.GetUserAllInSubGroupTableResponseGetUserAllInSubGroupTableResult GetUserAllInSubGroupTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3253,7 +3253,7 @@ namespace UMSService
         {
         }
         
-        public GetUserAllInSubGroupTableResponse(UMSService.GetUserAllInSubGroupTableResponseGetUserAllInSubGroupTableResult GetUserAllInSubGroupTableResult, string dbError)
+        public GetUserAllInSubGroupTableResponse(UmsService.GetUserAllInSubGroupTableResponseGetUserAllInSubGroupTableResult GetUserAllInSubGroupTableResult, string dbError)
         {
             this.GetUserAllInSubGroupTableResult = GetUserAllInSubGroupTableResult;
             this.dbError = dbError;
@@ -3319,7 +3319,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetUserAllOnlyRegisterdTableResponseGetUserAllOnlyRegisterdTableResult GetUserAllOnlyRegisterdTableResult;
+        public UmsService.GetUserAllOnlyRegisterdTableResponseGetUserAllOnlyRegisterdTableResult GetUserAllOnlyRegisterdTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3329,7 +3329,7 @@ namespace UMSService
         {
         }
         
-        public GetUserAllOnlyRegisterdTableResponse(UMSService.GetUserAllOnlyRegisterdTableResponseGetUserAllOnlyRegisterdTableResult GetUserAllOnlyRegisterdTableResult, string dbError)
+        public GetUserAllOnlyRegisterdTableResponse(UmsService.GetUserAllOnlyRegisterdTableResponseGetUserAllOnlyRegisterdTableResult GetUserAllOnlyRegisterdTableResult, string dbError)
         {
             this.GetUserAllOnlyRegisterdTableResult = GetUserAllOnlyRegisterdTableResult;
             this.dbError = dbError;
@@ -3395,7 +3395,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetUserAllRelToMasterTableResponseGetUserAllRelToMasterTableResult GetUserAllRelToMasterTableResult;
+        public UmsService.GetUserAllRelToMasterTableResponseGetUserAllRelToMasterTableResult GetUserAllRelToMasterTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3405,7 +3405,7 @@ namespace UMSService
         {
         }
         
-        public GetUserAllRelToMasterTableResponse(UMSService.GetUserAllRelToMasterTableResponseGetUserAllRelToMasterTableResult GetUserAllRelToMasterTableResult, string dbError)
+        public GetUserAllRelToMasterTableResponse(UmsService.GetUserAllRelToMasterTableResponseGetUserAllRelToMasterTableResult GetUserAllRelToMasterTableResult, string dbError)
         {
             this.GetUserAllRelToMasterTableResult = GetUserAllRelToMasterTableResult;
             this.dbError = dbError;
@@ -3471,7 +3471,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetUserAllTypeTableResponseGetUserAllTypeTableResult GetUserAllTypeTableResult;
+        public UmsService.GetUserAllTypeTableResponseGetUserAllTypeTableResult GetUserAllTypeTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3481,7 +3481,7 @@ namespace UMSService
         {
         }
         
-        public GetUserAllTypeTableResponse(UMSService.GetUserAllTypeTableResponseGetUserAllTypeTableResult GetUserAllTypeTableResult, string dbError)
+        public GetUserAllTypeTableResponse(UmsService.GetUserAllTypeTableResponseGetUserAllTypeTableResult GetUserAllTypeTableResult, string dbError)
         {
             this.GetUserAllTypeTableResult = GetUserAllTypeTableResult;
             this.dbError = dbError;
@@ -3521,7 +3521,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.ArrayOfXElement GetUserAppDetailsbyUserNameApplicationUrlResult;
+        public UmsService.ArrayOfXElement GetUserAppDetailsbyUserNameApplicationUrlResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3531,7 +3531,7 @@ namespace UMSService
         {
         }
         
-        public GetUserAppDetailsbyUserNameApplicationUrlResponse(UMSService.ArrayOfXElement GetUserAppDetailsbyUserNameApplicationUrlResult, string dbError)
+        public GetUserAppDetailsbyUserNameApplicationUrlResponse(UmsService.ArrayOfXElement GetUserAppDetailsbyUserNameApplicationUrlResult, string dbError)
         {
             this.GetUserAppDetailsbyUserNameApplicationUrlResult = GetUserAppDetailsbyUserNameApplicationUrlResult;
             this.dbError = dbError;
@@ -3566,7 +3566,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.ArrayOfXElement GetUserDetailsResult;
+        public UmsService.ArrayOfXElement GetUserDetailsResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3576,7 +3576,7 @@ namespace UMSService
         {
         }
         
-        public GetUserDetailsResponse(UMSService.ArrayOfXElement GetUserDetailsResult, string dbError)
+        public GetUserDetailsResponse(UmsService.ArrayOfXElement GetUserDetailsResult, string dbError)
         {
             this.GetUserDetailsResult = GetUserDetailsResult;
             this.dbError = dbError;
@@ -3656,7 +3656,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetUserDetailsbyGroupIDslocationIDResponseGetUserDetailsbyGroupIDslocationIDResult GetUserDetailsbyGroupIDslocationIDResult;
+        public UmsService.GetUserDetailsbyGroupIDslocationIDResponseGetUserDetailsbyGroupIDslocationIDResult GetUserDetailsbyGroupIDslocationIDResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3666,7 +3666,7 @@ namespace UMSService
         {
         }
         
-        public GetUserDetailsbyGroupIDslocationIDResponse(UMSService.GetUserDetailsbyGroupIDslocationIDResponseGetUserDetailsbyGroupIDslocationIDResult GetUserDetailsbyGroupIDslocationIDResult, string dbError)
+        public GetUserDetailsbyGroupIDslocationIDResponse(UmsService.GetUserDetailsbyGroupIDslocationIDResponseGetUserDetailsbyGroupIDslocationIDResult GetUserDetailsbyGroupIDslocationIDResult, string dbError)
         {
             this.GetUserDetailsbyGroupIDslocationIDResult = GetUserDetailsbyGroupIDslocationIDResult;
             this.dbError = dbError;
@@ -3746,7 +3746,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetUserDetailsbySubGroupIDslocationIDResponseGetUserDetailsbySubGroupIDslocationIDResult GetUserDetailsbySubGroupIDslocationIDResult;
+        public UmsService.GetUserDetailsbySubGroupIDslocationIDResponseGetUserDetailsbySubGroupIDslocationIDResult GetUserDetailsbySubGroupIDslocationIDResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3756,7 +3756,7 @@ namespace UMSService
         {
         }
         
-        public GetUserDetailsbySubGroupIDslocationIDResponse(UMSService.GetUserDetailsbySubGroupIDslocationIDResponseGetUserDetailsbySubGroupIDslocationIDResult GetUserDetailsbySubGroupIDslocationIDResult, string dbError)
+        public GetUserDetailsbySubGroupIDslocationIDResponse(UmsService.GetUserDetailsbySubGroupIDslocationIDResponseGetUserDetailsbySubGroupIDslocationIDResult GetUserDetailsbySubGroupIDslocationIDResult, string dbError)
         {
             this.GetUserDetailsbySubGroupIDslocationIDResult = GetUserDetailsbySubGroupIDslocationIDResult;
             this.dbError = dbError;
@@ -3836,7 +3836,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetUserR4GStatesbyUserNameApplicationUrlResponseGetUserR4GStatesbyUserNameApplicationUrlResult GetUserR4GStatesbyUserNameApplicationUrlResult;
+        public UmsService.GetUserR4GStatesbyUserNameApplicationUrlResponseGetUserR4GStatesbyUserNameApplicationUrlResult GetUserR4GStatesbyUserNameApplicationUrlResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3846,7 +3846,7 @@ namespace UMSService
         {
         }
         
-        public GetUserR4GStatesbyUserNameApplicationUrlResponse(UMSService.GetUserR4GStatesbyUserNameApplicationUrlResponseGetUserR4GStatesbyUserNameApplicationUrlResult GetUserR4GStatesbyUserNameApplicationUrlResult, string dbError)
+        public GetUserR4GStatesbyUserNameApplicationUrlResponse(UmsService.GetUserR4GStatesbyUserNameApplicationUrlResponseGetUserR4GStatesbyUserNameApplicationUrlResult GetUserR4GStatesbyUserNameApplicationUrlResult, string dbError)
         {
             this.GetUserR4GStatesbyUserNameApplicationUrlResult = GetUserR4GStatesbyUserNameApplicationUrlResult;
             this.dbError = dbError;
@@ -3926,7 +3926,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetUsersGroupByStateCodeAPPURLResponseGetUsersGroupByStateCodeAPPURLResult GetUsersGroupByStateCodeAPPURLResult;
+        public UmsService.GetUsersGroupByStateCodeAPPURLResponseGetUsersGroupByStateCodeAPPURLResult GetUsersGroupByStateCodeAPPURLResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -3936,7 +3936,7 @@ namespace UMSService
         {
         }
         
-        public GetUsersGroupByStateCodeAPPURLResponse(UMSService.GetUsersGroupByStateCodeAPPURLResponseGetUsersGroupByStateCodeAPPURLResult GetUsersGroupByStateCodeAPPURLResult, string dbError)
+        public GetUsersGroupByStateCodeAPPURLResponse(UmsService.GetUsersGroupByStateCodeAPPURLResponseGetUsersGroupByStateCodeAPPURLResult GetUsersGroupByStateCodeAPPURLResult, string dbError)
         {
             this.GetUsersGroupByStateCodeAPPURLResult = GetUsersGroupByStateCodeAPPURLResult;
             this.dbError = dbError;
@@ -4011,7 +4011,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetUserRegisteredToGroupTableResponseGetUserRegisteredToGroupTableResult GetUserRegisteredToGroupTableResult;
+        public UmsService.GetUserRegisteredToGroupTableResponseGetUserRegisteredToGroupTableResult GetUserRegisteredToGroupTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -4021,7 +4021,7 @@ namespace UMSService
         {
         }
         
-        public GetUserRegisteredToGroupTableResponse(UMSService.GetUserRegisteredToGroupTableResponseGetUserRegisteredToGroupTableResult GetUserRegisteredToGroupTableResult, string dbError)
+        public GetUserRegisteredToGroupTableResponse(UmsService.GetUserRegisteredToGroupTableResponseGetUserRegisteredToGroupTableResult GetUserRegisteredToGroupTableResult, string dbError)
         {
             this.GetUserRegisteredToGroupTableResult = GetUserRegisteredToGroupTableResult;
             this.dbError = dbError;
@@ -4096,7 +4096,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.GetUserRelToMasterTableResponseGetUserRelToMasterTableResult GetUserRelToMasterTableResult;
+        public UmsService.GetUserRelToMasterTableResponseGetUserRelToMasterTableResult GetUserRelToMasterTableResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -4106,7 +4106,7 @@ namespace UMSService
         {
         }
         
-        public GetUserRelToMasterTableResponse(UMSService.GetUserRelToMasterTableResponseGetUserRelToMasterTableResult GetUserRelToMasterTableResult, string dbError)
+        public GetUserRelToMasterTableResponse(UmsService.GetUserRelToMasterTableResponseGetUserRelToMasterTableResult GetUserRelToMasterTableResult, string dbError)
         {
             this.GetUserRelToMasterTableResult = GetUserRelToMasterTableResult;
             this.dbError = dbError;
@@ -4121,13 +4121,13 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.UserCache relUserSupervisorGet;
+        public UmsService.UserCache relUserSupervisorGet;
         
         public GetUserSupervisorsRequest()
         {
         }
         
-        public GetUserSupervisorsRequest(UMSService.UserCache relUserSupervisorGet)
+        public GetUserSupervisorsRequest(UmsService.UserCache relUserSupervisorGet)
         {
             this.relUserSupervisorGet = relUserSupervisorGet;
         }
@@ -4141,7 +4141,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.ArrayOfXElement GetUserSupervisorsResult;
+        public UmsService.ArrayOfXElement GetUserSupervisorsResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -4151,7 +4151,7 @@ namespace UMSService
         {
         }
         
-        public GetUserSupervisorsResponse(UMSService.ArrayOfXElement GetUserSupervisorsResult, string dbError)
+        public GetUserSupervisorsResponse(UmsService.ArrayOfXElement GetUserSupervisorsResult, string dbError)
         {
             this.GetUserSupervisorsResult = GetUserSupervisorsResult;
             this.dbError = dbError;
@@ -4295,7 +4295,7 @@ namespace UMSService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UMSService.ArrayOfXElement GetUserDetailsByApplicationUrlResult;
+        public UmsService.ArrayOfXElement GetUserDetailsByApplicationUrlResult;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -4305,7 +4305,7 @@ namespace UMSService
         {
         }
         
-        public GetUserDetailsByApplicationUrlResponse(UMSService.ArrayOfXElement GetUserDetailsByApplicationUrlResult, string dbError)
+        public GetUserDetailsByApplicationUrlResponse(UmsService.ArrayOfXElement GetUserDetailsByApplicationUrlResult, string dbError)
         {
             this.GetUserDetailsByApplicationUrlResult = GetUserDetailsByApplicationUrlResult;
             this.dbError = dbError;
@@ -4313,13 +4313,13 @@ namespace UMSService
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    public interface IUserProviderChannel : UMSService.IUserProvider, System.ServiceModel.IClientChannel
+    public interface IUserProviderChannel : UmsService.IUserProvider, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    public partial class UserProviderClient : System.ServiceModel.ClientBase<UMSService.IUserProvider>, UMSService.IUserProvider
+    public partial class UserProviderClient : System.ServiceModel.ClientBase<UmsService.IUserProvider>, UmsService.IUserProvider
     {
         
     /// <summary>
@@ -4362,222 +4362,222 @@ namespace UMSService
         {
         }
         
-        public System.Threading.Tasks.Task<UMSService.AuthenticateApplicationAccessResponse> AuthenticateApplicationAccessAsync(UMSService.AuthenticateApplicationAccessRequest request)
+        public System.Threading.Tasks.Task<UmsService.AuthenticateApplicationAccessResponse> AuthenticateApplicationAccessAsync(UmsService.AuthenticateApplicationAccessRequest request)
         {
             return base.Channel.AuthenticateApplicationAccessAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.AuthenticateUserResponse> AuthenticateUserAsync(UMSService.AuthenticateUserRequest request)
+        public System.Threading.Tasks.Task<UmsService.AuthenticateUserResponse> AuthenticateUserAsync(UmsService.AuthenticateUserRequest request)
         {
             return base.Channel.AuthenticateUserAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetDomainUserDetailsResponse> GetDomainUserDetailsAsync(UMSService.GetDomainUserDetailsRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetDomainUserDetailsResponse> GetDomainUserDetailsAsync(UmsService.GetDomainUserDetailsRequest request)
         {
             return base.Channel.GetDomainUserDetailsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetDomainUsersResponse> GetDomainUsersAsync(UMSService.GetDomainUsersRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetDomainUsersResponse> GetDomainUsersAsync(UmsService.GetDomainUsersRequest request)
         {
             return base.Channel.GetDomainUsersAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetErrorOnUserTableResponse> GetErrorOnUserTableAsync(UMSService.GetErrorOnUserTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetErrorOnUserTableResponse> GetErrorOnUserTableAsync(UmsService.GetErrorOnUserTableRequest request)
         {
             return base.Channel.GetErrorOnUserTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetErrorTableResponse> GetErrorTableAsync(UMSService.GetErrorTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetErrorTableResponse> GetErrorTableAsync(UmsService.GetErrorTableRequest request)
         {
             return base.Channel.GetErrorTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetGroupAllFeatureRelBoundaryTableResponse> GetGroupAllFeatureRelBoundaryTableAsync(UMSService.GetGroupAllFeatureRelBoundaryTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetGroupAllFeatureRelBoundaryTableResponse> GetGroupAllFeatureRelBoundaryTableAsync(UmsService.GetGroupAllFeatureRelBoundaryTableRequest request)
         {
             return base.Channel.GetGroupAllFeatureRelBoundaryTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetGroupAppAllTableResponse> GetGroupAppAllTableAsync(UMSService.GetGroupAppAllTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetGroupAppAllTableResponse> GetGroupAppAllTableAsync(UmsService.GetGroupAppAllTableRequest request)
         {
             return base.Channel.GetGroupAppAllTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetGroupAppTableResponse> GetGroupAppTableAsync(UMSService.GetGroupAppTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetGroupAppTableResponse> GetGroupAppTableAsync(UmsService.GetGroupAppTableRequest request)
         {
             return base.Channel.GetGroupAppTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetGroupBoundaryRelTableResponse> GetGroupBoundaryRelTableAsync(UMSService.GetGroupBoundaryRelTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetGroupBoundaryRelTableResponse> GetGroupBoundaryRelTableAsync(UmsService.GetGroupBoundaryRelTableRequest request)
         {
             return base.Channel.GetGroupBoundaryRelTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetGroupFeatureRelBoundaryTableResponse> GetGroupFeatureRelBoundaryTableAsync(UMSService.GetGroupFeatureRelBoundaryTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetGroupFeatureRelBoundaryTableResponse> GetGroupFeatureRelBoundaryTableAsync(UmsService.GetGroupFeatureRelBoundaryTableRequest request)
         {
             return base.Channel.GetGroupFeatureRelBoundaryTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetGroupPrivAllTableResponse> GetGroupPrivAllTableAsync(UMSService.GetGroupPrivAllTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetGroupPrivAllTableResponse> GetGroupPrivAllTableAsync(UmsService.GetGroupPrivAllTableRequest request)
         {
             return base.Channel.GetGroupPrivAllTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetGroupPrivTableResponse> GetGroupPrivTableAsync(UMSService.GetGroupPrivTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetGroupPrivTableResponse> GetGroupPrivTableAsync(UmsService.GetGroupPrivTableRequest request)
         {
             return base.Channel.GetGroupPrivTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetGroupUserFeaRelBoundaryTableResponse> GetGroupUserFeaRelBoundaryTableAsync(UMSService.GetGroupUserFeaRelBoundaryTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetGroupUserFeaRelBoundaryTableResponse> GetGroupUserFeaRelBoundaryTableAsync(UmsService.GetGroupUserFeaRelBoundaryTableRequest request)
         {
             return base.Channel.GetGroupUserFeaRelBoundaryTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetRealtedUsersByUserLocationApplicationResponse> GetRealtedUsersByUserLocationApplicationAsync(UMSService.GetRealtedUsersByUserLocationApplicationRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetRealtedUsersByUserLocationApplicationResponse> GetRealtedUsersByUserLocationApplicationAsync(UmsService.GetRealtedUsersByUserLocationApplicationRequest request)
         {
             return base.Channel.GetRealtedUsersByUserLocationApplicationAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetSubGroupAllFeatureRelBoundaryTableResponse> GetSubGroupAllFeatureRelBoundaryTableAsync(UMSService.GetSubGroupAllFeatureRelBoundaryTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetSubGroupAllFeatureRelBoundaryTableResponse> GetSubGroupAllFeatureRelBoundaryTableAsync(UmsService.GetSubGroupAllFeatureRelBoundaryTableRequest request)
         {
             return base.Channel.GetSubGroupAllFeatureRelBoundaryTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetSubGroupAppAllTableResponse> GetSubGroupAppAllTableAsync(UMSService.GetSubGroupAppAllTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetSubGroupAppAllTableResponse> GetSubGroupAppAllTableAsync(UmsService.GetSubGroupAppAllTableRequest request)
         {
             return base.Channel.GetSubGroupAppAllTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetSubGroupAppTableResponse> GetSubGroupAppTableAsync(UMSService.GetSubGroupAppTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetSubGroupAppTableResponse> GetSubGroupAppTableAsync(UmsService.GetSubGroupAppTableRequest request)
         {
             return base.Channel.GetSubGroupAppTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetSubGroupBoundaryRelTableResponse> GetSubGroupBoundaryRelTableAsync(UMSService.GetSubGroupBoundaryRelTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetSubGroupBoundaryRelTableResponse> GetSubGroupBoundaryRelTableAsync(UmsService.GetSubGroupBoundaryRelTableRequest request)
         {
             return base.Channel.GetSubGroupBoundaryRelTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetSubGroupFeatureRelBoundaryTableResponse> GetSubGroupFeatureRelBoundaryTableAsync(UMSService.GetSubGroupFeatureRelBoundaryTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetSubGroupFeatureRelBoundaryTableResponse> GetSubGroupFeatureRelBoundaryTableAsync(UmsService.GetSubGroupFeatureRelBoundaryTableRequest request)
         {
             return base.Channel.GetSubGroupFeatureRelBoundaryTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetSubGroupPrivAllTableResponse> GetSubGroupPrivAllTableAsync(UMSService.GetSubGroupPrivAllTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetSubGroupPrivAllTableResponse> GetSubGroupPrivAllTableAsync(UmsService.GetSubGroupPrivAllTableRequest request)
         {
             return base.Channel.GetSubGroupPrivAllTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetSubGroupPrivTableResponse> GetSubGroupPrivTableAsync(UMSService.GetSubGroupPrivTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetSubGroupPrivTableResponse> GetSubGroupPrivTableAsync(UmsService.GetSubGroupPrivTableRequest request)
         {
             return base.Channel.GetSubGroupPrivTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetSubGroupsbyUserNameApplicationUrlResponse> GetSubGroupsbyUserNameApplicationUrlAsync(UMSService.GetSubGroupsbyUserNameApplicationUrlRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetSubGroupsbyUserNameApplicationUrlResponse> GetSubGroupsbyUserNameApplicationUrlAsync(UmsService.GetSubGroupsbyUserNameApplicationUrlRequest request)
         {
             return base.Channel.GetSubGroupsbyUserNameApplicationUrlAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetSubGroupUserFeaRelBoundaryTableResponse> GetSubGroupUserFeaRelBoundaryTableAsync(UMSService.GetSubGroupUserFeaRelBoundaryTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetSubGroupUserFeaRelBoundaryTableResponse> GetSubGroupUserFeaRelBoundaryTableAsync(UmsService.GetSubGroupUserFeaRelBoundaryTableRequest request)
         {
             return base.Channel.GetSubGroupUserFeaRelBoundaryTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetTransactionTableResponse> GetTransactionTableAsync(UMSService.GetTransactionTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetTransactionTableResponse> GetTransactionTableAsync(UmsService.GetTransactionTableRequest request)
         {
             return base.Channel.GetTransactionTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserAllInGroupTableResponse> GetUserAllInGroupTableAsync(UMSService.GetUserAllInGroupTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserAllInGroupTableResponse> GetUserAllInGroupTableAsync(UmsService.GetUserAllInGroupTableRequest request)
         {
             return base.Channel.GetUserAllInGroupTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserAllInSubGroupTableResponse> GetUserAllInSubGroupTableAsync(UMSService.GetUserAllInSubGroupTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserAllInSubGroupTableResponse> GetUserAllInSubGroupTableAsync(UmsService.GetUserAllInSubGroupTableRequest request)
         {
             return base.Channel.GetUserAllInSubGroupTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserAllOnlyRegisterdTableResponse> GetUserAllOnlyRegisterdTableAsync(UMSService.GetUserAllOnlyRegisterdTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserAllOnlyRegisterdTableResponse> GetUserAllOnlyRegisterdTableAsync(UmsService.GetUserAllOnlyRegisterdTableRequest request)
         {
             return base.Channel.GetUserAllOnlyRegisterdTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserAllRelToMasterTableResponse> GetUserAllRelToMasterTableAsync(UMSService.GetUserAllRelToMasterTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserAllRelToMasterTableResponse> GetUserAllRelToMasterTableAsync(UmsService.GetUserAllRelToMasterTableRequest request)
         {
             return base.Channel.GetUserAllRelToMasterTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserAllTypeTableResponse> GetUserAllTypeTableAsync(UMSService.GetUserAllTypeTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserAllTypeTableResponse> GetUserAllTypeTableAsync(UmsService.GetUserAllTypeTableRequest request)
         {
             return base.Channel.GetUserAllTypeTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserAppDetailsbyUserNameApplicationUrlResponse> GetUserAppDetailsbyUserNameApplicationUrlAsync(UMSService.GetUserAppDetailsbyUserNameApplicationUrlRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserAppDetailsbyUserNameApplicationUrlResponse> GetUserAppDetailsbyUserNameApplicationUrlAsync(UmsService.GetUserAppDetailsbyUserNameApplicationUrlRequest request)
         {
             return base.Channel.GetUserAppDetailsbyUserNameApplicationUrlAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserDetailsResponse> GetUserDetailsAsync(UMSService.GetUserDetailsRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserDetailsResponse> GetUserDetailsAsync(UmsService.GetUserDetailsRequest request)
         {
             return base.Channel.GetUserDetailsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserDetailsbyGroupIDslocationIDResponse> GetUserDetailsbyGroupIDslocationIDAsync(UMSService.GetUserDetailsbyGroupIDslocationIDRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserDetailsbyGroupIDslocationIDResponse> GetUserDetailsbyGroupIDslocationIDAsync(UmsService.GetUserDetailsbyGroupIDslocationIDRequest request)
         {
             return base.Channel.GetUserDetailsbyGroupIDslocationIDAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserDetailsbySubGroupIDslocationIDResponse> GetUserDetailsbySubGroupIDslocationIDAsync(UMSService.GetUserDetailsbySubGroupIDslocationIDRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserDetailsbySubGroupIDslocationIDResponse> GetUserDetailsbySubGroupIDslocationIDAsync(UmsService.GetUserDetailsbySubGroupIDslocationIDRequest request)
         {
             return base.Channel.GetUserDetailsbySubGroupIDslocationIDAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserR4GStatesbyUserNameApplicationUrlResponse> GetUserR4GStatesbyUserNameApplicationUrlAsync(UMSService.GetUserR4GStatesbyUserNameApplicationUrlRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserR4GStatesbyUserNameApplicationUrlResponse> GetUserR4GStatesbyUserNameApplicationUrlAsync(UmsService.GetUserR4GStatesbyUserNameApplicationUrlRequest request)
         {
             return base.Channel.GetUserR4GStatesbyUserNameApplicationUrlAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUsersGroupByStateCodeAPPURLResponse> GetUsersGroupByStateCodeAPPURLAsync(UMSService.GetUsersGroupByStateCodeAPPURLRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUsersGroupByStateCodeAPPURLResponse> GetUsersGroupByStateCodeAPPURLAsync(UmsService.GetUsersGroupByStateCodeAPPURLRequest request)
         {
             return base.Channel.GetUsersGroupByStateCodeAPPURLAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserRegisteredToGroupTableResponse> GetUserRegisteredToGroupTableAsync(UMSService.GetUserRegisteredToGroupTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserRegisteredToGroupTableResponse> GetUserRegisteredToGroupTableAsync(UmsService.GetUserRegisteredToGroupTableRequest request)
         {
             return base.Channel.GetUserRegisteredToGroupTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserRelToMasterTableResponse> GetUserRelToMasterTableAsync(UMSService.GetUserRelToMasterTableRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserRelToMasterTableResponse> GetUserRelToMasterTableAsync(UmsService.GetUserRelToMasterTableRequest request)
         {
             return base.Channel.GetUserRelToMasterTableAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserSupervisorsResponse> GetUserSupervisorsAsync(UMSService.GetUserSupervisorsRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserSupervisorsResponse> GetUserSupervisorsAsync(UmsService.GetUserSupervisorsRequest request)
         {
             return base.Channel.GetUserSupervisorsAsync(request);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<UMSService.UserActivityLogResponse> UMSService.IUserProvider.UserActivityLogAsync(UMSService.UserActivityLogRequest request)
+        System.Threading.Tasks.Task<UmsService.UserActivityLogResponse> UmsService.IUserProvider.UserActivityLogAsync(UmsService.UserActivityLogRequest request)
         {
             return base.Channel.UserActivityLogAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.UserActivityLogResponse> UserActivityLogAsync(string UserName, string ApplicationUrl, string Activity)
+        public System.Threading.Tasks.Task<UmsService.UserActivityLogResponse> UserActivityLogAsync(string UserName, string ApplicationUrl, string Activity)
         {
-            UMSService.UserActivityLogRequest inValue = new UMSService.UserActivityLogRequest();
+            UmsService.UserActivityLogRequest inValue = new UmsService.UserActivityLogRequest();
             inValue.UserName = UserName;
             inValue.ApplicationUrl = ApplicationUrl;
             inValue.Activity = Activity;
-            return ((UMSService.IUserProvider)(this)).UserActivityLogAsync(inValue);
+            return ((UmsService.IUserProvider)(this)).UserActivityLogAsync(inValue);
         }
         
-        public System.Threading.Tasks.Task<UMSService.UserRegisterSearchResponse> UserRegisterSearchAsync(UMSService.UserRegisterSearchRequest request)
+        public System.Threading.Tasks.Task<UmsService.UserRegisterSearchResponse> UserRegisterSearchAsync(UmsService.UserRegisterSearchRequest request)
         {
             return base.Channel.UserRegisterSearchAsync(request);
         }
         
-        public System.Threading.Tasks.Task<UMSService.GetUserDetailsByApplicationUrlResponse> GetUserDetailsByApplicationUrlAsync(UMSService.GetUserDetailsByApplicationUrlRequest request)
+        public System.Threading.Tasks.Task<UmsService.GetUserDetailsByApplicationUrlResponse> GetUserDetailsByApplicationUrlAsync(UmsService.GetUserDetailsByApplicationUrlRequest request)
         {
             return base.Channel.GetUserDetailsByApplicationUrlAsync(request);
         }
@@ -4610,7 +4610,7 @@ namespace UMSService
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpEndpoint))
             {
-                return new System.ServiceModel.EndpointAddress("http://jiogis.replica.jioconnect.com/UMSService/UserProvider.svc");
+                return new System.ServiceModel.EndpointAddress("http://nvmbd1bkh150v02.rjil.ril.com/UMSService_PRM_DEV/UserProvider.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

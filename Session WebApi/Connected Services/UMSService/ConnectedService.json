@@ -1,12 +1,9 @@
 ﻿{
   "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
   "Version": "15.0.20628.921",
-  "GettingStartedDocument": {
-    "Uri": "https://go.microsoft.com/fwlink/?linkid=858517"
-  },
   "ExtendedData": {
-    "Uri": "http://nvmbd1bkh150v02.rjil.ril.com/UMSService_PRM_DEV/UserProvider.svc",
-    "Namespace": "UMSService",
+    "Uri": "http://nvmbd1bkh150v02.rjil.ril.com/UMSService_PRM_DEV/UserProvider.svc?wsdl",
+    "Namespace": "UmsService",
     "SelectedAccessLevelForGeneratedClass": "Public",
     "GenerateMessageContract": false,
     "ReuseTypesinReferencedAssemblies": true,
@@ -21,7 +18,7 @@
     },
     "CheckedReferencedAssemblies": [],
     "InstanceId": null,
-    "Name": "UMSService",
+    "Name": "UmsService",
     "Metadata": {}
   }
 }
