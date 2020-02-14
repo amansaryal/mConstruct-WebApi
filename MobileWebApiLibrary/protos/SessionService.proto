@@ -25,6 +25,7 @@ enum Appname{
 message UMSData{
 	Appname appname = 1;
 	repeated string roles = 2;	
+	repeated string boundaryCodes = 3;
 }
 
 message LoginRequest{

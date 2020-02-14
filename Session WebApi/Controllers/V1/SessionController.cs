@@ -1,16 +1,18 @@
 ﻿using Grpc.services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using MobileWebApiLibrary;
 using MobileWebApiLibrary.Action_Filters;
 using MobileWebApiLibrary.Controllers;
+using Session_WebApi.Models;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Linq;
 
 namespace Session_WebApi.Controllers.V1
 {
@@ -19,6 +21,13 @@ namespace Session_WebApi.Controllers.V1
     [Route("SessionApi/v1")]
     public class SessionController : BaseController
     {
+        private readonly IConfiguration configuration;
+
+        public SessionController(IConfiguration Configuration)
+        {
+            configuration = Configuration;
+        }
+
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(GISStatusCodes.Status911UnsupportedAppVersion)]
@@ -45,11 +54,10 @@ namespace Session_WebApi.Controllers.V1
             //authenticate user
             await AuthenticateUserInUMS(loginRequest.Username, loginRequest.Password);
 
-            ;
-
             UserSession userSession = new UserSession();
             userSession.Username = loginRequest.Username;
-            userSession.UmsDetails.Add((int)loginRequest.AppName, await GetRoles(loginRequest.Username, loginRequest.AppName));
+            userSession.UmsDetails.Add((int)loginRequest.AppName, GetUmsData(await GetUmsDataSet(loginRequest.Username, loginRequest.AppName), loginRequest.AppName));
+            userSession.Token = await GenerateToken(loginRequest.Username, loginRequest.AppName, loginRequest.Imei);
 
             return userSession;
 
@@ -131,19 +139,16 @@ namespace Session_WebApi.Controllers.V1
 
         }
 
-        private async Task<UMSData> GetRoles(string username, Appname appname)
+        private async Task<DataSet> GetUmsDataSet(string username, Appname appname)
         {
             UMSBindings.UmsAppUrlMap.TryGetValue(appname, out string appUrl);
-            UmsService.GetUserAppDetailsbyUserNameApplicationUrlResponse response = await new UmsService.UserProviderClient().GetUserAppDetailsbyUserNameApplicationUrlAsync(new UmsService.GetUserAppDetailsbyUserNameApplicationUrlRequest {
+            UmsService.GetUserAppDetailsbyUserNameApplicationUrlResponse response = await new UmsService.UserProviderClient().GetUserAppDetailsbyUserNameApplicationUrlAsync(new UmsService.GetUserAppDetailsbyUserNameApplicationUrlRequest
+            {
                 userName = username,
                 applicationUrl = appUrl
             });
 
-            var result = response.GetUserAppDetailsbyUserNameApplicationUrlResult;
-
-            //initialize returned role list
-            var umsData = new UMSData();
-            umsData.Appname = appname;
+            var result = response.GetUserAppDetailsbyUserNameApplicationUrlResult;            
 
             //create a data set from returned xelement list
             DataSet dataSet = new DataSet();
@@ -156,17 +161,132 @@ namespace Session_WebApi.Controllers.V1
                 dataSet.ReadXml(new StringReader(result.Nodes[i].ToString()));
             }
 
+            return dataSet;
+        }
 
-            if (dataSet.Tables.Count == 4 && dataSet.Tables[3] != null)
+        private UMSData GetUmsData(DataSet umsDataSet, Appname appname = Appname.Noname)
+        {
+            //initialize returned ums data
+            var umsData = new UMSData();
+            umsData.Appname = appname;
+
+            //get roles
+            if (umsDataSet.Tables.Count == 4 && umsDataSet.Tables[3] != null)
             {
-                for (int i = 0; i < dataSet.Tables[3].Rows.Count; i++)
+                for (int i = 0; i < umsDataSet.Tables[3].Rows.Count; i++)
                 {
-                    var userRole = dataSet.Tables[3].Rows[i]["SUBGROUP_NAME"].ToString();
+                    var userRole = umsDataSet.Tables[3].Rows[i]["SUBGROUP_NAME"].ToString();
                     umsData.Roles.Add(userRole);
                 }
             }
 
+            //get boundary code
+            if (umsDataSet.Tables.Count == 4 && umsDataSet.Tables[2] != null)
+            {
+                for (int i = 0; i < umsDataSet.Tables[2].Rows.Count; i++)
+                {
+                    var boundaryCode = umsDataSet.Tables[2].Rows[i]["BOUNDARY_CODE"].ToString();
+                    umsData.BoundaryCodes.Add(boundaryCode);
+                }
+            }
+
             return umsData;
+        }
+
+        private async Task<string> GenerateToken(string username, Appname appname, string deviceID)
+        {
+
+            //generate session token
+            var sessionToken = GenerateUniqueString();
+
+            //remove stale session records if any
+            await FlushStaleSession(username, appname);
+
+            //add new session to database
+            if (!await CreateNewSession(username, appname, deviceID, sessionToken)) {
+                //duplicate token encountered, generate new and try again
+                await CreateNewSession(username, appname, deviceID, sessionToken = GenerateUniqueString());
+            }
+            return sessionToken;
+        }
+
+        private string GenerateUniqueString()
+        {
+            char[] chars = new char[62];
+            chars = configuration.GetValue<string>("chars").ToCharArray();
+
+            byte[] data = new byte[1];
+            int maxSize = configuration.GetValue<int>("maxSize");
+
+            using (RNGCryptoServiceProvider crypto = new RNGCryptoServiceProvider())
+            {
+                crypto.GetNonZeroBytes(data);
+                data = new byte[maxSize];
+                crypto.GetNonZeroBytes(data);
+            }
+            StringBuilder sb = new StringBuilder(maxSize);
+            foreach (byte b in data)
+            {
+                sb.Append(chars[b % (chars.Length)]);
+            }
+
+            return sb.ToString();
+        }
+
+        private async Task FlushStaleSession(string username, Appname appname)
+        {
+            var context = new PlngDbContext();
+
+            UMSBindings.BackwardsCompatibleAppnames.TryGetValue(appname, out string oldAppName);
+
+            var records = context.Usersessioninfo
+                .Where(user =>
+                user.Userid.ToLower() == username.ToLower() &&
+                 (
+                 user.Appname.ToLower() == appname.ToString().ToLower() ||
+                 user.Appname.ToLower() == oldAppName.ToLower()
+                 )
+                 ).ToList();
+
+            if (records.Count > 0)
+            {
+                //remove
+                records.RemoveAll(user => true);
+
+                await context.SaveChangesAsync();
+            }
+        }
+
+        public async Task<bool> CreateNewSession(string username, Appname appname, string deviceID, string sessionToken)
+        {
+            var context = new PlngDbContext();
+
+                try
+                {
+                    //update old record and mark sesssion as active with the provided session token
+                    context.Usersessioninfo.Add(new Usersessioninfo
+                    {
+                        Userid = username,
+                        Appname = appname.ToString(),
+
+                        Isactive = "Y",
+                        Deviceid = deviceID,
+                        Sessionkey = sessionToken
+                    });
+
+                    await context.SaveChangesAsync();
+                }
+                catch (Exception ex)
+                {
+
+                if (ex.InnerException != null && ex.InnerException.Message.Contains("unique constraint")) //this means that the session token already exists so retry
+                    return false;
+                else
+                    throw ex;
+                }
+            
+
+            return true;
         }
     }
 }

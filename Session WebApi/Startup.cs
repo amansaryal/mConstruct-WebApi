@@ -10,6 +10,8 @@ using MobileWebApiLibrary.Middlewares;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 using System.Linq;
+using Session_WebApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Session_WebApi
 {
@@ -62,12 +64,15 @@ namespace Session_WebApi
 
                      var versions = methodInfo.DeclaringType
                          .GetCustomAttributes(true)
-                         .OfType<ApiVersionAttribute>()
+                         .OfType<ApiVersionAttribute>() 
                          .SelectMany(attr => attr.Versions);
 
                      return versions.Any(v => $"v{v.ToString()}" == docName);
                  });
             });
+
+            services.AddDbContext<PlngDbContext>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

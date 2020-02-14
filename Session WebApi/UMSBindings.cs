@@ -10,7 +10,13 @@ namespace Session_WebApi
             {Appname.Mconstruct, "" },
             {Appname.Onmrfs, "https://nvmbd1bkh150v02.in.ril.com/OnMRFS" },
         };
-  
 
-}
+        public static Dictionary<Appname, string> BackwardsCompatibleAppnames = new Dictionary<Appname, string>
+        {
+            {Appname.Mconstruct, "FttxmConstruct" },
+            {Appname.Onmrfs, "onmrfs" },
+        };
+
+
+    }
 }

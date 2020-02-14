@@ -13,7 +13,7 @@ namespace Session_WebApi
 {
     public class Client
 {
-        private String url = "http://localhost:5000/api/session/login";
+        private String url = "http://localhost:5000/sessionapi/v1/login";
 
         public void makeRequest(LoginRequest requestObject)
         {

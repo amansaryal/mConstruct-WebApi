@@ -25,24 +25,24 @@ namespace Grpc.services {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chtwcm90b3MvU2Vzc2lvblNlcnZpY2UucHJvdG8aE3Byb3Rvcy9Db21tb24u",
-            "cHJvdG8iMwoHVU1TRGF0YRIZCgdhcHBuYW1lGAEgASgOMgguQXBwbmFtZRIN",
-            "CgVyb2xlcxgCIAMoCSKCAQoMTG9naW5SZXF1ZXN0EhAKCHVzZXJuYW1lGAEg",
-            "ASgJEhAKCHBhc3N3b3JkGAIgASgJEhkKB2FwcE5hbWUYAyABKA4yCC5BcHBu",
-            "YW1lEgwKBGltZWkYBCABKAkSEQoJaXBBZGRyZXNzGAUgASgJEhIKCmFwcFZl",
-            "cnNpb24YBiABKAUinQEKC1VzZXJTZXNzaW9uEhAKCHVzZXJuYW1lGAEgASgJ",
-            "Eg0KBXRva2VuGAIgASgJEjAKCnVtc0RldGFpbHMYAyADKAsyHC5Vc2VyU2Vz",
-            "c2lvbi5VbXNEZXRhaWxzRW50cnkaOwoPVW1zRGV0YWlsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoBRIXCgV2YWx1ZRgCIAEoCzIILlVNU0RhdGE6AjgBIjwKDUxvZ291",
-            "dFJlcXVlc3QSEAoIdXNlcm5hbWUYASABKAkSGQoHYXBwTmFtZRgCIAEoDjII",
-            "LkFwcG5hbWUqMQoHQXBwbmFtZRIKCgZOT05BTUUQABIOCgpNQ09OU1RSVUNU",
-            "EAESCgoGT05NUkZTEAIyVAoHU2Vzc2lvbhIkCgVMb2dpbhINLkxvZ2luUmVx",
-            "dWVzdBoMLlVzZXJTZXNzaW9uEiMKBkxvZ291dBIOLkxvZ291dFJlcXVlc3Qa",
-            "CS5SZXNwb25zZUIpChdjb20ubUNvbnN0cnVjdC5wcm90b2J1ZqoCDUdycGMu",
-            "c2VydmljZXNiBnByb3RvMw=="));
+            "cHJvdG8iSgoHVU1TRGF0YRIZCgdhcHBuYW1lGAEgASgOMgguQXBwbmFtZRIN",
+            "CgVyb2xlcxgCIAMoCRIVCg1ib3VuZGFyeUNvZGVzGAMgAygJIoIBCgxMb2dp",
+            "blJlcXVlc3QSEAoIdXNlcm5hbWUYASABKAkSEAoIcGFzc3dvcmQYAiABKAkS",
+            "GQoHYXBwTmFtZRgDIAEoDjIILkFwcG5hbWUSDAoEaW1laRgEIAEoCRIRCglp",
+            "cEFkZHJlc3MYBSABKAkSEgoKYXBwVmVyc2lvbhgGIAEoBSKdAQoLVXNlclNl",
+            "c3Npb24SEAoIdXNlcm5hbWUYASABKAkSDQoFdG9rZW4YAiABKAkSMAoKdW1z",
+            "RGV0YWlscxgDIAMoCzIcLlVzZXJTZXNzaW9uLlVtc0RldGFpbHNFbnRyeRo7",
+            "Cg9VbXNEZXRhaWxzRW50cnkSCwoDa2V5GAEgASgFEhcKBXZhbHVlGAIgASgL",
+            "MgguVU1TRGF0YToCOAEiPAoNTG9nb3V0UmVxdWVzdBIQCgh1c2VybmFtZRgB",
+            "IAEoCRIZCgdhcHBOYW1lGAIgASgOMgguQXBwbmFtZSoxCgdBcHBuYW1lEgoK",
+            "Bk5PTkFNRRAAEg4KCk1DT05TVFJVQ1QQARIKCgZPTk1SRlMQAjJUCgdTZXNz",
+            "aW9uEiQKBUxvZ2luEg0uTG9naW5SZXF1ZXN0GgwuVXNlclNlc3Npb24SIwoG",
+            "TG9nb3V0Eg4uTG9nb3V0UmVxdWVzdBoJLlJlc3BvbnNlQikKF2NvbS5tQ29u",
+            "c3RydWN0LnByb3RvYnVmqgINR3JwYy5zZXJ2aWNlc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Grpc.common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grpc.services.Appname), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.UMSData), global::Grpc.services.UMSData.Parser, new[]{ "Appname", "Roles" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.UMSData), global::Grpc.services.UMSData.Parser, new[]{ "Appname", "Roles", "BoundaryCodes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.LoginRequest), global::Grpc.services.LoginRequest.Parser, new[]{ "Username", "Password", "AppName", "Imei", "IpAddress", "AppVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.UserSession), global::Grpc.services.UserSession.Parser, new[]{ "Username", "Token", "UmsDetails" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.LogoutRequest), global::Grpc.services.LogoutRequest.Parser, new[]{ "Username", "AppName" }, null, null, null, null)
@@ -88,6 +88,7 @@ namespace Grpc.services {
     public UMSData(UMSData other) : this() {
       appname_ = other.appname_;
       roles_ = other.roles_.Clone();
+      boundaryCodes_ = other.boundaryCodes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -117,6 +118,16 @@ namespace Grpc.services {
       get { return roles_; }
     }
 
+    /// <summary>Field number for the "boundaryCodes" field.</summary>
+    public const int BoundaryCodesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_boundaryCodes_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> boundaryCodes_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> BoundaryCodes {
+      get { return boundaryCodes_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as UMSData);
@@ -132,6 +143,7 @@ namespace Grpc.services {
       }
       if (Appname != other.Appname) return false;
       if(!roles_.Equals(other.roles_)) return false;
+      if(!boundaryCodes_.Equals(other.boundaryCodes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -140,6 +152,7 @@ namespace Grpc.services {
       int hash = 1;
       if (Appname != global::Grpc.services.Appname.Noname) hash ^= Appname.GetHashCode();
       hash ^= roles_.GetHashCode();
+      hash ^= boundaryCodes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -158,6 +171,7 @@ namespace Grpc.services {
         output.WriteEnum((int) Appname);
       }
       roles_.WriteTo(output, _repeated_roles_codec);
+      boundaryCodes_.WriteTo(output, _repeated_boundaryCodes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -170,6 +184,7 @@ namespace Grpc.services {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Appname);
       }
       size += roles_.CalculateSize(_repeated_roles_codec);
+      size += boundaryCodes_.CalculateSize(_repeated_boundaryCodes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -185,6 +200,7 @@ namespace Grpc.services {
         Appname = other.Appname;
       }
       roles_.Add(other.roles_);
+      boundaryCodes_.Add(other.boundaryCodes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -202,6 +218,10 @@ namespace Grpc.services {
           }
           case 18: {
             roles_.AddEntriesFrom(input, _repeated_roles_codec);
+            break;
+          }
+          case 26: {
+            boundaryCodes_.AddEntriesFrom(input, _repeated_boundaryCodes_codec);
             break;
           }
         }

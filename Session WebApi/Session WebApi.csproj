@@ -20,9 +20,10 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="3.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.14-servicing-32113" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
-    <PackageReference Include="Oracle.ManagedDataAccess" Version="19.6.0" />
+    <PackageReference Include="Oracle.EntityFrameworkCore" Version="2.19.60" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.60" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
     <PackageReference Include="System.Diagnostics.EventLog" Version="4.7.0" />
     <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
