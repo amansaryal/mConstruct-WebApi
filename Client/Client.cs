@@ -13,7 +13,7 @@ namespace Session_WebApi
 {
     public class Client
 {
-        private String url = "http://localhost:5000/sessionapi/v1/login";
+        private String url = "http://localhost:5000/test/login";
 
         public void makeRequest(LoginRequest requestObject)
         {
@@ -25,6 +25,7 @@ namespace Session_WebApi
                 HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
                 webRequest.Method = "POST";
                 webRequest.ContentType = "application/protobuf";
+                webRequest.Accept = "application/protobuf";
                 webRequest.ContentLength = data.Length;
                 using (Stream postStream = webRequest.GetRequestStream())
                 {
@@ -98,7 +99,7 @@ namespace Session_WebApi
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
                     var responseText = streamReader.ReadToEnd();
-                    Console.WriteLine(UserSession.Parser.ParseJson(responseText).ToString());
+                    Console.WriteLine(responseText);
                 }
                 
             }
@@ -117,22 +118,48 @@ namespace Session_WebApi
                 HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
                 webRequest.Method = "POST";
                 webRequest.ContentType = "application/json";
-                using (var streamWriter = new StreamWriter(webRequest.GetRequestStream()))
-                {
-                    //encrypt request
-                    byte[] encryptedRequest = EncryptionHelper.EncryptCode(Encoding.UTF8.GetBytes(requestObject.ToString()));
+                webRequest.Headers.Add("X-Secure", "true");
 
-                    streamWriter.Write(encryptedRequest);
-                    streamWriter.Flush();
-                }
+                //encrypt request
+                byte[] encryptedRequest = EncryptionHelper.EncryptCode(Encoding.UTF8.GetBytes(requestObject.ToString()));
+
+                webRequest.GetRequestStream().Write(encryptedRequest, 0, encryptedRequest.Length);
+
                 WebResponse httpResponse = webRequest.GetResponse();
 
-                //decrypt response
+                byte[] decryptedResponse = EncryptionHelper.DecryptCode(StreamHelper.ReadFully(httpResponse.GetResponseStream()));
+                
+                Console.WriteLine(Encoding.UTF8.GetString(decryptedResponse));
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ex:" + ex.Message);
+
+            }
+        }
+
+        public void makeEncryptedProtoJsonRequest(LoginRequest requestObject)
+        {
+            try
+            {
+                // Prepare web request...
+                HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
+                webRequest.Method = "POST";
+                webRequest.ContentType = "application/proto+json";
+                webRequest.Accept = "application/proto+json";
+                webRequest.Headers.Add("X-Secure", "true");
+
+                //encrypt request
+                byte[] encryptedRequest = EncryptionHelper.EncryptCode(Encoding.UTF8.GetBytes(requestObject.ToString()));
+
+                webRequest.GetRequestStream().Write(encryptedRequest, 0, encryptedRequest.Length);
+
+                WebResponse httpResponse = webRequest.GetResponse();
+
                 byte[] decryptedResponse = EncryptionHelper.DecryptCode(StreamHelper.ReadFully(httpResponse.GetResponseStream()));
 
-                var responseText = Encoding.UTF8.GetString(decryptedResponse);
-
-                Console.WriteLine(UserSession.Parser.ParseJson(responseText).ToString());
+                Console.WriteLine(Encoding.UTF8.GetString(decryptedResponse));
 
             }
             catch (Exception ex)

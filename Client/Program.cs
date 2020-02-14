@@ -15,8 +15,10 @@ namespace MobileWebApiLibrary
             request.IpAddress = "23456";
             request.AppVersion = 4;
 
-             
             new Client().makeEncryptedRequest(request);
+            new Client().makeJsonRequest(request);
+            new Client().makeEncryptedJsonRequest(request);
+            new Client().makeEncryptedProtoJsonRequest(request);
 
         }
     }

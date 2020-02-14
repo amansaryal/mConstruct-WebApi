@@ -28,9 +28,9 @@ namespace MobileWebApiLibrary.Middlewares
             if (httpContext.Request.Headers.ContainsKey("X-Secure"))
             {
 
-                StringValues x_secure_header_values = new StringValues();
+                httpContext.Request.Headers.TryGetValue("X-Secure", out StringValues x_secure_header_values);
 
-                if (httpContext.Request.Headers.TryGetValue("X-Secure", out x_secure_header_values) && x_secure_header_values.ToString() == "true")
+                if (x_secure_header_values.ToString() == "true")
                 {
                     //decrypt request
                     byte[] encryptedRequest = StreamHelper.ReadFully(httpContext.Request.Body);
@@ -60,6 +60,8 @@ namespace MobileWebApiLibrary.Middlewares
                     
                     //replace original stream
                     httpContext.Response.Body = originalStream;
+
+                    return;
                 }
             }
 
