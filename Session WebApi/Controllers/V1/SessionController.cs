@@ -119,7 +119,7 @@ namespace Session_WebApi.Controllers.V1
                 };
 
             //get latest app version
-            AppVersions.appVersionMappings.TryGetValue(appName, out int latestAppVersion);
+            MobileAppBindings.appVersionMappings.TryGetValue(appName, out int latestAppVersion);
 
             //if equal then it's valid
             if (appVersion == latestAppVersion)
@@ -257,7 +257,7 @@ namespace Session_WebApi.Controllers.V1
             }
         }
 
-        public async Task<bool> CreateNewSession(string username, Appname appname, string deviceID, string sessionToken)
+        private async Task<bool> CreateNewSession(string username, Appname appname, string deviceID, string sessionToken)
         {
             var context = new PlngDbContext();
 

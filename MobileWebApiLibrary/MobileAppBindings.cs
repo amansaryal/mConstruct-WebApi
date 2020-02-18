@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MobileWebApiLibrary
 {
-    public static class AppVersions
+    public static class MobileAppBindings
     {
         public static Dictionary<Appname, int> appVersionMappings = new Dictionary<Appname, int>
         {

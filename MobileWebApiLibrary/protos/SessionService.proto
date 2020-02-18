@@ -41,6 +41,7 @@ message UserSession{
 	string username = 1;
 	string token = 2;
 	map<int32,UMSData> umsDetails = 3;
+	repeated string notifications = 4;
 }
 
 message LogoutRequest{

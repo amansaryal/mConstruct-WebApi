@@ -29,22 +29,23 @@ namespace Grpc.services {
             "CgVyb2xlcxgCIAMoCRIVCg1ib3VuZGFyeUNvZGVzGAMgAygJIoIBCgxMb2dp",
             "blJlcXVlc3QSEAoIdXNlcm5hbWUYASABKAkSEAoIcGFzc3dvcmQYAiABKAkS",
             "GQoHYXBwTmFtZRgDIAEoDjIILkFwcG5hbWUSDAoEaW1laRgEIAEoCRIRCglp",
-            "cEFkZHJlc3MYBSABKAkSEgoKYXBwVmVyc2lvbhgGIAEoBSKdAQoLVXNlclNl",
+            "cEFkZHJlc3MYBSABKAkSEgoKYXBwVmVyc2lvbhgGIAEoBSK0AQoLVXNlclNl",
             "c3Npb24SEAoIdXNlcm5hbWUYASABKAkSDQoFdG9rZW4YAiABKAkSMAoKdW1z",
-            "RGV0YWlscxgDIAMoCzIcLlVzZXJTZXNzaW9uLlVtc0RldGFpbHNFbnRyeRo7",
-            "Cg9VbXNEZXRhaWxzRW50cnkSCwoDa2V5GAEgASgFEhcKBXZhbHVlGAIgASgL",
-            "MgguVU1TRGF0YToCOAEiPAoNTG9nb3V0UmVxdWVzdBIQCgh1c2VybmFtZRgB",
-            "IAEoCRIZCgdhcHBOYW1lGAIgASgOMgguQXBwbmFtZSoxCgdBcHBuYW1lEgoK",
-            "Bk5PTkFNRRAAEg4KCk1DT05TVFJVQ1QQARIKCgZPTk1SRlMQAjJUCgdTZXNz",
-            "aW9uEiQKBUxvZ2luEg0uTG9naW5SZXF1ZXN0GgwuVXNlclNlc3Npb24SIwoG",
-            "TG9nb3V0Eg4uTG9nb3V0UmVxdWVzdBoJLlJlc3BvbnNlQikKF2NvbS5tQ29u",
-            "c3RydWN0LnByb3RvYnVmqgINR3JwYy5zZXJ2aWNlc2IGcHJvdG8z"));
+            "RGV0YWlscxgDIAMoCzIcLlVzZXJTZXNzaW9uLlVtc0RldGFpbHNFbnRyeRIV",
+            "Cg1ub3RpZmljYXRpb25zGAQgAygJGjsKD1Vtc0RldGFpbHNFbnRyeRILCgNr",
+            "ZXkYASABKAUSFwoFdmFsdWUYAiABKAsyCC5VTVNEYXRhOgI4ASI8Cg1Mb2dv",
+            "dXRSZXF1ZXN0EhAKCHVzZXJuYW1lGAEgASgJEhkKB2FwcE5hbWUYAiABKA4y",
+            "CC5BcHBuYW1lKjEKB0FwcG5hbWUSCgoGTk9OQU1FEAASDgoKTUNPTlNUUlVD",
+            "VBABEgoKBk9OTVJGUxACMlQKB1Nlc3Npb24SJAoFTG9naW4SDS5Mb2dpblJl",
+            "cXVlc3QaDC5Vc2VyU2Vzc2lvbhIjCgZMb2dvdXQSDi5Mb2dvdXRSZXF1ZXN0",
+            "GgkuUmVzcG9uc2VCKQoXY29tLm1Db25zdHJ1Y3QucHJvdG9idWaqAg1HcnBj",
+            "LnNlcnZpY2VzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Grpc.common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grpc.services.Appname), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.UMSData), global::Grpc.services.UMSData.Parser, new[]{ "Appname", "Roles", "BoundaryCodes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.LoginRequest), global::Grpc.services.LoginRequest.Parser, new[]{ "Username", "Password", "AppName", "Imei", "IpAddress", "AppVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.UserSession), global::Grpc.services.UserSession.Parser, new[]{ "Username", "Token", "UmsDetails" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.UserSession), global::Grpc.services.UserSession.Parser, new[]{ "Username", "Token", "UmsDetails", "Notifications" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.services.LogoutRequest), global::Grpc.services.LogoutRequest.Parser, new[]{ "Username", "AppName" }, null, null, null, null)
           }));
     }
@@ -527,6 +528,7 @@ namespace Grpc.services {
       username_ = other.username_;
       token_ = other.token_;
       umsDetails_ = other.umsDetails_.Clone();
+      notifications_ = other.notifications_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -567,6 +569,16 @@ namespace Grpc.services {
       get { return umsDetails_; }
     }
 
+    /// <summary>Field number for the "notifications" field.</summary>
+    public const int NotificationsFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_notifications_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> notifications_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Notifications {
+      get { return notifications_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as UserSession);
@@ -583,6 +595,7 @@ namespace Grpc.services {
       if (Username != other.Username) return false;
       if (Token != other.Token) return false;
       if (!UmsDetails.Equals(other.UmsDetails)) return false;
+      if(!notifications_.Equals(other.notifications_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -592,6 +605,7 @@ namespace Grpc.services {
       if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (Token.Length != 0) hash ^= Token.GetHashCode();
       hash ^= UmsDetails.GetHashCode();
+      hash ^= notifications_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -614,6 +628,7 @@ namespace Grpc.services {
         output.WriteString(Token);
       }
       umsDetails_.WriteTo(output, _map_umsDetails_codec);
+      notifications_.WriteTo(output, _repeated_notifications_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -629,6 +644,7 @@ namespace Grpc.services {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
       }
       size += umsDetails_.CalculateSize(_map_umsDetails_codec);
+      size += notifications_.CalculateSize(_repeated_notifications_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -647,6 +663,7 @@ namespace Grpc.services {
         Token = other.Token;
       }
       umsDetails_.Add(other.umsDetails_);
+      notifications_.Add(other.notifications_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -668,6 +685,10 @@ namespace Grpc.services {
           }
           case 26: {
             umsDetails_.AddEntriesFrom(input, _map_umsDetails_codec);
+            break;
+          }
+          case 34: {
+            notifications_.AddEntriesFrom(input, _repeated_notifications_codec);
             break;
           }
         }

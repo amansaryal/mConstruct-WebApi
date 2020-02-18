@@ -49,15 +49,15 @@ namespace Session_WebApi.Controllers.V2
                 };
 
 
-            validateApp(loginRequest.AppName, loginRequest.AppVersion);
+            //validateApp(loginRequest.AppName, loginRequest.AppVersion);
 
-            //authenticate user
-            AuthenticateUserInUMS(loginRequest.Username, loginRequest.Password);
+            ////authenticate user
+            //AuthenticateUserInUMS(loginRequest.Username, loginRequest.Password);
 
             UserSession userSession = new UserSession();
             userSession.Username = loginRequest.Username;
-            userSession.UmsDetails.Add((int)loginRequest.AppName, GetUmsData(GetUmsDataSet(loginRequest.Username, loginRequest.AppName), loginRequest.AppName));
-            userSession.Token = GenerateToken(loginRequest.Username, loginRequest.AppName, loginRequest.Imei);
+            //userSession.UmsDetails.Add((int)loginRequest.AppName, GetUmsData(GetUmsDataSet(loginRequest.Username, loginRequest.AppName), loginRequest.AppName));
+            //userSession.Token = GenerateToken(loginRequest.Username, loginRequest.AppName, loginRequest.Imei);
 
             return userSession;
 
@@ -119,7 +119,7 @@ namespace Session_WebApi.Controllers.V2
                 };
 
             //get latest app version
-            AppVersions.appVersionMappings.TryGetValue(appName, out int latestAppVersion);
+            MobileAppBindings.appVersionMappings.TryGetValue(appName, out int latestAppVersion);
 
             //if equal then it's valid
             if (appVersion == latestAppVersion)
@@ -258,7 +258,7 @@ namespace Session_WebApi.Controllers.V2
             }
         }
 
-        public bool CreateNewSession(string username, Appname appname, string deviceID, string sessionToken)
+        private bool CreateNewSession(string username, Appname appname, string deviceID, string sessionToken)
         {
             var context = new PlngDbContext();
 
