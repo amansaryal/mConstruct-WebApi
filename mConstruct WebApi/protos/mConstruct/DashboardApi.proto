@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "protos/mConstruct/data/K2Data.proto";
+import "protos/mConstruct/data/DashboardData.proto";
+option csharp_namespace = "Grpc.services";
+option java_package = "com.mConstruct.protobuf";
+
+service Dashboard{
+	rpc GetDashboardData (DashboardDataRequest) returns (DashboardData);
+}
+
+message DashboardDataRequest{
+	string username = 1;
+	K2Role role = 2;
+	string jpID = 3;
+}
+
+
+
+
