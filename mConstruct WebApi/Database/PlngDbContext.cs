@@ -1,47 +1,40 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace mConstruct_WebApi.Models
 {
-    public partial class ModelContext : DbContext
+    public partial class PlngDbContext : DbContext
     {
-        public ModelContext()
+        public PlngDbContext()
         {
         }
 
-        public ModelContext(DbContextOptions<ModelContext> options)
+        public PlngDbContext(DbContextOptions<PlngDbContext> options)
             : base(options)
         {
         }
 
-        public virtual DbSet<FttxTaskmaster1> FttxTaskmaster1 { get; set; }
+        public virtual DbSet<MobUserSessions> MobUserSessions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseOracle("Data Source=(DESCRIPTION=(CID=GTU_APP)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=dev-scan.ril.com)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=PLNGDEV)(SERVER=DEDICATED)));User ID=APP_FTTX;Password=fttx_182");
-            }
+        {           
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:DefaultSchema", "APP_FTTX");
 
-            modelBuilder.Entity<FttxTaskmaster1>(entity =>
+            modelBuilder.Entity<FttxTaskmaster>(entity =>
             {
-                entity.HasKey(e => e.Taskid);
+                entity.HasKey(e => e.Objectid);
 
-                entity.ToTable("FTTX_TASKMASTER_1");
+                entity.ToTable("FTTX_TASKMASTER");
 
                 entity.HasIndex(e => e.Objectid)
-                    .HasName("R800_SDE_ROWID_UK")
+                    .HasName("R71912_SDE_ROWID_UK")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Taskid)
-                    .HasName("PK_TM_1")
+                entity.HasIndex(e => e.Objectid)
+                    .HasName("PK_TM")
                     .IsUnique();
 
                 entity.Property(e => e.Taskid)
@@ -116,7 +109,9 @@ namespace mConstruct_WebApi.Models
                     .HasColumnType("NUMBER(38)")
                     .ValueGeneratedOnAdd();
 
-                entity.Property(e => e.Rev).HasColumnName("REV");
+                entity.Property(e => e.Rev)
+                .HasColumnName("REV")
+                .HasColumnType("NUMBER(5)");
 
                 entity.Property(e => e.Role)
                     .HasColumnName("ROLE")
@@ -129,6 +124,231 @@ namespace mConstruct_WebApi.Models
                 entity.Property(e => e.Tasktype)
                     .HasColumnName("TASKTYPE")
                     .HasMaxLength(50);
+
+                entity.Property(e => e.Createduser)
+                    .HasColumnName("CREATED_USER")
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.Createddate)
+                    .HasColumnName("CREATED_DATE")
+                    .HasColumnType("DATE");
+
+                entity.Property(e => e.Lastediteduser)
+                    .HasColumnName("LAST_EDITED_USER")
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.Lastediteddate)
+                    .HasColumnName("LAST_EDITED_DATE")
+                    .HasColumnType("DATE");
+
+                entity.Property(e => e.Nestatus)
+                    .HasColumnName("NE_STATUS")
+                    .HasMaxLength(3);
+
+                entity.Property(e => e.Remarks)
+                    .HasColumnName("REMARKS")
+                    .HasMaxLength(1000);
+
+                entity.Property(e => e.Updateflag)
+                    .HasColumnName("UPDATEFLAG")
+                    .HasColumnType("NUMBER(10)");
+
+                entity.Property(e => e.Assignedby)
+                    .HasColumnName("ASSIGNEDBY")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Assignedto)
+                    .HasColumnName("ASSIGNEDTO")
+                    .HasMaxLength(200);
+
+                entity.Property(e => e.Assigneddate)
+                    .HasColumnName("ASSIGNED_DATE")
+                    .HasColumnType("DATE");
+
+                entity.Property(e => e.Isblocked)
+                    .HasColumnName("ISBLOCKED")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.Hotodone)
+                    .HasColumnName("HOTODONE")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.Source)
+                    .HasColumnName("SOURCE")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Rowrequired)
+                    .HasColumnName("ROW_REQUIRED")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Dsaname)
+                    .HasColumnName("DSANAME")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Csaname)
+                    .HasColumnName("CSANAME")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Isqaremark)
+                    .HasColumnName("IS_QA_REMARK")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.Offercode)
+                    .HasColumnName("OFFER_CODE")
+                    .HasMaxLength(30);
+
+                entity.Property(e => e.Offerstatus)
+                    .HasColumnName("OFFER_STATUS")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.Jcsapid)
+                    .HasColumnName("JC_SAP_ID")
+                    .HasMaxLength(30);
+
+                entity.Property(e => e.Jcname)
+                    .HasColumnName("JCNAME")
+                    .HasMaxLength(240);
+
+                entity.Property(e => e.Fsaname)
+                    .HasColumnName("FSANAME")
+                    .HasMaxLength(240);
+
+                entity.Property(e => e.Roleuser)
+                    .HasColumnName("ROLEUSER")
+                    .HasMaxLength(240);
+
+                entity.Property(e => e.Workorder)
+                    .HasColumnName("WORKORDER")
+                    .HasMaxLength(30);
+
+                entity.Property(e => e.Pendingwith)
+                    .HasColumnName("PENDINGWITH")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Modifieddate)
+                    .HasColumnName("MODIFIEDDATE")
+                    .HasColumnType("DATE");
+
+                entity.Property(e => e.Neremarks)
+                    .HasColumnName("NE_REMARKS")
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.Inprogress)
+                    .HasColumnName("INPROGRESS")
+                    .HasMaxLength(5);
+
+                entity.Property(e => e.Newoname)
+                    .HasColumnName("NE_WO_NAME")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Newoobjectid)
+                    .HasColumnName("NE_WO_OBJECTID")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Newomigrationdate)
+                    .HasColumnName("NE_WO_MIGRATION_DATE")
+                    .HasColumnType("DATE");
+                
+                entity.Property(e => e.Nenewname)
+                .HasColumnName("NE_NEW_NAME")
+                .HasMaxLength(50);
+
+                entity.Property(e => e.Userlat)
+                    .HasColumnName("USER_LAT")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.Userlong)
+                    .HasColumnName("USER_LONG")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.Contractorstrategy)
+                    .HasColumnName("CONTRACTOR_STRATEGY")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.K2invoicestatus)
+                    .HasColumnName("K2_INVOICESTATUS")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Deviationaction)
+                    .HasColumnName("DEVIATION_ACTION")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.Jiopointsapid)
+                    .HasColumnName("JIOPOINT_SAPID")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.Jiopointname)
+                    .HasColumnName("JIOPOINT_NAME")
+                    .HasMaxLength(320);
+
+                entity.Property(e => e.Solutiontype)
+                    .HasColumnName("SOLUTION_TYPE")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Solutionid)
+                    .HasColumnName("SOLUTION_ID")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Leadid)
+                    .HasColumnName("LEAD_ID")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Enttasktype)
+                    .HasColumnName("ENT_TASK_TYPE")
+                    .HasMaxLength(30);
+
+                entity.Property(e => e.Leadname)
+                    .HasColumnName("LEAD_NAME")
+                    .HasMaxLength(250);
+
+                entity.Property(e => e.Documentpath)
+                    .HasColumnName("DOCUMENT_PATH")
+                    .HasMaxLength(700);
+
+                entity.Property(e => e.Offersource)
+                    .HasColumnName("OFFER_SOURCE")
+                    .HasMaxLength(20);
+            });
+
+            modelBuilder.Entity<MobUserSessions>(entity =>
+            {
+                entity.HasKey(e => e.SessionToken);
+
+                entity.ToTable("MOB_USER_SESSIONS");
+
+                entity.HasIndex(e => e.SessionToken)
+                    .HasName("MOB_USER_SESSIONS_PK")
+                    .IsUnique();
+
+                entity.Property(e => e.SessionToken)
+                    .HasColumnName("SESSION_TOKEN")
+                    .HasColumnType("VARCHAR2(20)")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.Deviceid)
+                    .HasColumnName("DEVICEID")
+                    .HasColumnType("VARCHAR2(40)");
+
+                entity.Property(e => e.FcmToken)
+                    .HasColumnName("FCM_TOKEN")
+                    .HasColumnType("VARCHAR2(1000)");
+
+                entity.Property(e => e.Isactive)
+                    .HasColumnName("ISACTIVE")
+                    .HasColumnType("VARCHAR2(5)");
+
+                entity.Property(e => e.Logintime)
+                    .HasColumnName("LOGINTIME")
+                    .HasColumnType("DATE");
+
+                entity.Property(e => e.MobAppKey)
+                    .IsRequired()
+                    .HasColumnName("MOB_APP_KEY")
+                    .HasColumnType("VARCHAR2(40)");
+
+                entity.Property(e => e.Userid)
+                    .HasColumnName("USERID")
+                    .HasColumnType("VARCHAR2(50)");
             });
 
             modelBuilder.HasSequence("APIREQUESTREFERENCE_AUDIT_ID");
